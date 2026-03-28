@@ -1,0 +1,42 @@
+name: Documentation
+description: A documentation improvement, addition, or correction
+title: "[Docs] "
+labels: ["documentation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for documentation improvements, additions, and corrections.
+        Do not assign this issue to any individual.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What documentation needs to be created, improved, or corrected?
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it matters
+      description: Who benefits from this documentation change?
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      placeholder: |
+        - [ ] Document created / updated
+        - [ ] Reviewed for accuracy
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: References, existing docs to build on, or related issues
