@@ -1,0 +1,50 @@
+name: Research
+description: A research question, experiment design, or investigation
+title: "[Research] "
+labels: ["research"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for research questions, experiment designs, and investigations.
+        Do not assign this issue to any individual.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is the research question or investigation?
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it matters
+      description: Why is this research question important to the project?
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: What does a satisfactory answer or outcome look like?
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: What prior work does this build on?
+      placeholder: "None, or list issue numbers"
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Relevant papers, datasets, baselines, or background context

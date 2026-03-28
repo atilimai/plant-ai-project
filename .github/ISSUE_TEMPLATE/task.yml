@@ -1,0 +1,50 @@
+name: Task
+description: A concrete development or implementation task
+title: "[Task] "
+labels: ["task"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for concrete implementation or development tasks.
+        Do not assign this issue to any individual.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What needs to be done?
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it matters
+      description: What does completing this task enable?
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: How will we know this is done?
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: What must be completed before this task can start?
+      placeholder: "None, or list issue numbers"
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Any additional context, constraints, or references

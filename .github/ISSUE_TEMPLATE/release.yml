@@ -1,0 +1,49 @@
+name: Release
+description: A release gate item or release preparation task
+title: "[Release] "
+labels: ["release"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for release gate items, release preparation tasks, and publication checklist items.
+        Do not assign this issue to any individual.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What release gate item or preparation task needs to be completed?
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it matters
+      description: What risk does this address, or what does completing this enable?
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: What must be done before this release item can be signed off?
+      placeholder: "None, or list issue numbers"
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Checklist items, references, or related RELEASE_CHECKLIST.md sections
