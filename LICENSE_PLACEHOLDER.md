@@ -1,51 +1,74 @@
 # License Placeholder
+# License and Attribution Review (Pending Finalization)
 
-> ⚠️ **This repository does not yet have a confirmed license.**
-> The license must be determined and verified before any public release.
+> ⚠️ This repository is currently under license review.
+> No public release of model weights or dataset-derived artifacts should be performed until all licenses are fully verified.
 
 ---
 
 ## Current Status
 
-- [ ] Dataset license (PlantVillage) has NOT yet been verified
-- [ ] Model license has NOT yet been determined
-- [ ] Code license has NOT yet been formally assigned
+- Dataset license (PlantVillage): Under review — non-commercial / research-use terms assumed but not yet formally confirmed
+- Model license: Not assigned yet (pending dataset compliance confirmation)
+- Code license: Not assigned yet
 
 ---
 
-## Action Required Before Public Release
+## License Review Summary
 
-### 1. Verify PlantVillage Dataset License
-The PlantVillage dataset is widely used but its redistribution and derivative work terms must be confirmed before:
-- Publishing trained model weights
-- Hosting a dataset card on Hugging Face
-- Redistributing preprocessed or augmented versions of the data
+### 1. Dataset License (PlantVillage)
+The PlantVillage dataset is used for research purposes in this project. Based on available documentation, it is commonly used under academic and non-commercial research conditions. However, **official redistribution and derivative work permissions must be verified before public release of any trained model or dataset-derived artifacts.**
 
-Consult the [PlantVillage dataset homepage](https://plantvillage.psu.edu/) and any associated academic publication license terms.
+  Until confirmation:
+- Model weights derived from this dataset must not be publicly released
+- Preprocessed dataset splits must not be redistributed externally
 
-### 2. Assign a Code License
-Common options for open ML research projects:
-- **MIT License** — permissive, widely compatible
-- **Apache 2.0** — permissive with patent clause
-- **GPL v3** — copyleft, requires derivative works to be open
-
-Choose a license compatible with the dataset terms.
-
-### 3. Assign a Model License
-If trained model weights are released:
-- Consider [OpenRAIL](https://www.licenses.ai/blog/2022/8/18/naming-convention-of-responsible-ai-licenses) or [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0)
-- Ensure it is compatible with the dataset license
+Reference:
+https://plantvillage.psu.edu/
 
 ---
 
-## Recommended Next Step
+### 2. Code License Decision
+The repository code (training, evaluation, and utilities) can be licensed independently of the dataset.
 
-Open the `license-and-attribution-review` issue and complete the review before Week 4 ends.
-See `RELEASE_CHECKLIST.md` for the full release-gate checklist.
+Recommended options:
+- MIT License (recommended for open research)
+- Apache 2.0 License (if patent protection is desired)
+
+  Final selection must ensure compatibility with dataset restrictions.
 
 ---
 
-## Placeholder Attribution
+### 3. Model Weights Licensing
+Model weights are considered derivative artifacts of the dataset.
 
-> Dataset: PlantVillage — attribution and license TBD
-> Code and models: license TBD
+  Therefore:
+- Public release is conditional on dataset license verification
+- If allowed, a responsible AI license (e.g., Apache 2.0 or OpenRAIL) should be used
+
+---
+
+## Attribution (Required)
+
+If this project is used or referenced, the following citation must be included:
+
+> Hughes, D. P., & Salathé, M. (2015). An open access repository of images of plant health to enable the development of mobile disease diagnostics.
+
+PlantVillage dataset: https://plantvillage.psu.edu/
+
+---
+
+## Final Determination
+
+-  No model weights or dataset derivatives are approved for release until licensing is fully verified
+-  Code may be released independently under an open-source license once selected
+-  This document serves as a blocking gate for final release
+
+---
+
+## Next Action
+
+Complete `CITATION.md` and finalize repository license assignment before proceeding to public release.
+
+---
+
