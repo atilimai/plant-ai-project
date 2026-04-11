@@ -11,12 +11,14 @@ If you use this project or derived models, please cite the following sources.
   title        = {Plant Disease Classification from Leaf Images},
   author       = {Project Contributors},
   year         = {2026},
-  howpublished = {\url{https://github.com/YOUR-REPO-URL}},
+  howpublished = {\url{https://github.com/atilimai/plant-ai-project}},
   note         = {Plant disease classification model trained on PlantVillage dataset}
- }
+}
+```
 
 ## Dataset Citation
 
+```bibtex
 @article{hughes2015open,
   title   = {An open access repository of images on plant health to enable the development of mobile disease diagnostics},
   author  = {Hughes, David and Salath{\'e}, Marcel},
