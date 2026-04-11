@@ -14,7 +14,6 @@ If you use this project or derived models, please cite the following sources.
   howpublished = {\url{https://github.com/YOUR-REPO-URL}},
   note         = {Plant disease classification model trained on PlantVillage dataset}
  }
-```
 
 ## Dataset Citation
 
@@ -24,6 +23,7 @@ If you use this project or derived models, please cite the following sources.
   journal = {arXiv preprint arXiv:1511.08060},
   year    = {2015}
 }
+```
 
 ## Notes
 
