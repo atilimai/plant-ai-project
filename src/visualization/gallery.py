@@ -25,7 +25,7 @@ def plot_prediction_gallery(images, true_labels, pred_labels, confidences, class
 
     plt.tight_layout()
 
-    save_dir = 'artifacts/sample_outputs/'
+    save_path = 'artifacts/sample_outputs/'
     os.makedirs(save_path, exist_ok=True)
-    plt.savefig(os.path.join(save_dir, 'prediction_gallery.png'), dpi=300)
+    plt.savefig(os.path.join(save_path, 'prediction_gallery.png'), dpi=300)
     plt.show()
