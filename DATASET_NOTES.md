@@ -11,9 +11,9 @@
 | **Name** | PlantVillage |
 | **Homepage** | [https://plantvillage.psu.edu/](https://plantvillage.psu.edu/) |
 | **Paper** | Hughes & Salathé, 2015 — "An open access repository of images on plant health" |
-| **Download source** | TBD — verify official access method (Kaggle, direct download, or Hugging Face Datasets) |
-| **License** | ⚠️ TBD — must be verified before release |
-| **Version used** | TBD — record exact version and hash |
+| **Download source** |[Hugging Face Datasets](https://huggingface.co/datasets/mohanty/PlantVillage)|
+| **License** |CC BY-NC-SA 3.0|
+| **Version used** |Default version (129,783 images)|
 
 ---
 
