@@ -1,0 +1,33 @@
+{
+    "Saglikli": {
+        "precision": 0.6666666666666666,
+        "recall": 0.4444444444444444,
+        "f1-score": 0.5333333333333333,
+        "support": 9.0
+    },
+    "Pasli_Yaprak": {
+        "precision": 0.16666666666666666,
+        "recall": 0.2,
+        "f1-score": 0.18181818181818182,
+        "support": 5.0
+    },
+    "Bakteriyel_Leke": {
+        "precision": 0.375,
+        "recall": 0.5,
+        "f1-score": 0.42857142857142855,
+        "support": 6.0
+    },
+    "accuracy": 0.4,
+    "macro avg": {
+        "precision": 0.40277777777777773,
+        "recall": 0.3814814814814815,
+        "f1-score": 0.3812409812409812,
+        "support": 20.0
+    },
+    "weighted avg": {
+        "precision": 0.4541666666666666,
+        "recall": 0.4,
+        "f1-score": 0.414025974025974,
+        "support": 20.0
+    }
+}
