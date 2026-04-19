@@ -35,3 +35,14 @@ Ratios are defined at the `leaf_id` level.
 ## Status
 
 Empty placeholder. Split files will be generated in Week 1 after dataset ingestion (Issue #01, #02).
+
+## ✅ Implementation Report (Data Engineering - April 2026)
+
+The data split process has been finalized in accordance with the **Split Integrity Constraint** defined above:
+
+- **Data Source:** Migrated to Hugging Face Datasets (`mohanty/PlantVillage`) for better reproducibility.
+- **Split Strategy:** Applied `GroupShuffleSplit` with a focus on instance isolation to maintain data integrity.
+- **Verification:** Post-split audit confirms an intersection result of **0** (Zero data leakage between Train and Test sets).
+- **Artifacts:** `train_split.csv` and `test_split.csv` have been generated and committed to this directory.
+
+**Current Status:** All placeholder constraints for this directory have been met and verified.
