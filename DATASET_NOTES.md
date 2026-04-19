@@ -74,12 +74,12 @@ This project does not attempt to address real-world generalization in its curren
 
 | Stat | Value |
 |---|---|
-| Total images | TBD |
-| Number of plant species | TBD |
-| Number of disease classes | TBD |
-| Number of healthy classes | TBD |
-| Image resolution | TBD |
-| Approximate class balance | TBD |
+| Total images | 129,783 |
+| Number of plant species | 14 |
+| Number of disease classes | 38 |
+| Number of healthy classes | 12 |
+| Image resolution | 256x256 (Original) |
+| Approximate class balance | Imbalanced (Needs weighted loss) |
 
 ---
 
