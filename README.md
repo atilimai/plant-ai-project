@@ -212,7 +212,14 @@ See [LICENSE_PLACEHOLDER.md](LICENSE_PLACEHOLDER.md) and [RELEASE_CHECKLIST.md](
 - Demo Space with Gradio interface (optional)
 
 ---
+## Hugging Face Release
 
+The Hugging Face model repository for this project is available here:
+
+- https://huggingface.co/atilimai/plantvillage-leaf-disease-classifier
+
+This repository currently hosts the public-facing model card and release documentation for the project.
+Model weights and additional artifacts will be added once final training outputs are available and release checks are completed.
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for community standards.
