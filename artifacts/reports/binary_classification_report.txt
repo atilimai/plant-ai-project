@@ -1,0 +1,4 @@
+Binary Classification Test Metrics
+Precision: 0.9862
+Recall: 0.9978
+F1-Score: 0.9919
