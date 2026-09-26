@@ -13,14 +13,14 @@ Releasing model weights or dataset-derived artifacts without confirming licensin
 
 ## Acceptance Criteria
 
-- [ ] PlantVillage dataset license and terms of use are reviewed and documented
-- [ ] Determination made on whether public release of model weights is permitted
-- [ ] Determination made on whether preprocessed dataset splits can be shared or must be excluded
-- [ ] Determination made on whether Hugging Face Hub hosting is permitted
-- [ ] Required attribution text identified and added to `CITATION.md`
-- [ ] A `LICENSE` file is added to the repository with the chosen code license
-- [ ] `LICENSE_PLACEHOLDER.md` is updated to reflect the completed review
-- [ ] All findings are documented before any public artifacts are released
+- [x] PlantVillage dataset license and terms of use are reviewed and documented
+- [x] Determination made on whether public release of model weights is permitted
+- [x] Determination made on whether preprocessed dataset splits can be shared or must be excluded
+- [x] Determination made on whether Hugging Face Hub hosting is permitted
+- [x] Required attribution text identified and added to `CITATION.md`
+- [x] A `LICENSE` file is added to the repository with the chosen code license
+- [x] `LICENSE_PLACEHOLDER.md` is updated to reflect the completed review
+- [x] All findings are documented before any public artifacts are released
 
 ## Dependencies
 
@@ -33,3 +33,9 @@ Releasing model weights or dataset-derived artifacts without confirming licensin
 - Check Hugging Face Datasets page if accessing via `datasets` library
 - If redistribution is not permitted, model weights and data splits must be excluded from the public release
 - This issue blocks the final release checklist
+
+---
+
+## Status
+
+Done. `LICENSING.md`: dataset is CC BY-SA 3.0 and the authors state that algorithms trained on it fall under the same licence, quoted from the original paper; weights and manifests are released as CC BY-SA 3.0, code stays GPL-2.0. The earlier claim of CC BY-NC-SA was wrong and is corrected. The ImageNet-pretrained backbone caveat is documented too.

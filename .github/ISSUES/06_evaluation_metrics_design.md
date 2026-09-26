@@ -13,13 +13,13 @@ Aggregate accuracy alone is insufficient for plant disease classification due to
 
 ## Acceptance Criteria
 
-- [ ] Evaluation runner implemented in `src/evaluation/`
-- [ ] Per-class precision, recall, and F1 computed for both classification tracks
-- [ ] Macro-averaged and weighted F1 computed
-- [ ] Support confidence score or probability output (for potential threshold tuning)
-- [ ] Results exported as structured files (CSV or JSON) to `artifacts/reports/`
-- [ ] Evaluation is run only on the held-out test set (not validation)
-- [ ] Evaluation results referenced and summarized in the model card
+- [x] Evaluation runner implemented in `src/evaluation/`
+- [x] Per-class precision, recall, and F1 computed for both classification tracks
+- [x] Macro-averaged and weighted F1 computed
+- [x] Support confidence score or probability output (for potential threshold tuning)
+- [x] Results exported as structured files (CSV or JSON) to `artifacts/reports/`
+- [x] Evaluation is run only on the held-out test set (not validation)
+- [x] Evaluation results referenced and summarized in the model card
 
 ## Dependencies
 
@@ -32,3 +32,9 @@ Aggregate accuracy alone is insufficient for plant disease classification due to
 - Consider adding top-k accuracy for the multiclass track
 - Evaluation runner should be reusable across both classification tracks with minimal changes
 - All evaluation code should be callable from a Colab notebook
+
+---
+
+## Status
+
+Done. `src/evaluation/metrics.py` and `evaluate.py`: per-class precision/recall/F1, macro and weighted averages, balanced accuracy, top-3/top-5, ECE, and for the binary track sensitivity, specificity and ROC-AUC. Probabilities and per-image predictions are exported, so thresholds can be studied afterwards. Test-set evaluation refuses to run unless the leakage audit passed.

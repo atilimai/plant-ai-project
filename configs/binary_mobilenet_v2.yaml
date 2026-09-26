@@ -1,0 +1,6 @@
+base: train_base.yaml
+run_name: binary_mobilenet_v2
+task: binary
+
+model:
+  arch: mobilenet_v2

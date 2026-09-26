@@ -13,13 +13,13 @@ A confusion matrix reveals which specific class pairs are most frequently confus
 
 ## Acceptance Criteria
 
-- [ ] Confusion matrix visualizer implemented in `src/visualization/`
-- [ ] Supports both binary (2×2) and multiclass (N×N) configurations
-- [ ] Confusion matrix is normalized (by row) and also shows raw counts (configurable)
-- [ ] Class labels are readable on both axes
-- [ ] Plots exported as PNG or PDF to `artifacts/figures/`
-- [ ] Visualizer is callable from a Colab notebook with a single function call
-- [ ] Example confusion matrices for both tracks committed to `artifacts/figures/`
+- [x] Confusion matrix visualizer implemented in `src/visualization/`
+- [x] Supports both binary (2×2) and multiclass (N×N) configurations
+- [x] Confusion matrix is normalized (by row) and also shows raw counts (configurable)
+- [x] Class labels are readable on both axes
+- [x] Plots exported as PNG or PDF to `artifacts/figures/`
+- [x] Visualizer is callable from a Colab notebook with a single function call
+- [x] Example confusion matrices for both tracks committed to `artifacts/figures/`
 
 ## Dependencies
 
@@ -32,3 +32,9 @@ A confusion matrix reveals which specific class pairs are most frequently confus
 - Consider including a title with model name and dataset split information
 - For the multiclass track, ensure class label font size is legible when there are many classes
 - Export at sufficient resolution for inclusion in reports and the model card
+
+---
+
+## Status
+
+Done. `src/visualization/confusion_matrix.py`, row-normalised and raw-count versions for both tracks, exported for every run to `artifacts/figures/<run>/`.

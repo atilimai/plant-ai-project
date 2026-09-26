@@ -1,22 +1,23 @@
-# src/evaluation/
+# src/evaluation
 
-This directory will contain the evaluation pipeline, metrics computation, and report generation utilities.
-
-## Planned Contents
-
-| Module | Purpose |
+| Module | What it does |
 |---|---|
-| `evaluator.py` | Evaluation runner that loads a checkpoint and runs inference on the test set |
-| `metrics.py` | Per-class precision, recall, F1, macro/weighted aggregates |
-| `reporter.py` | Exports evaluation results as structured files (CSV/JSON) to `artifacts/reports/` |
+| `evaluate.py` | Runs a checkpoint over a split and writes metrics, predictions and figures |
+| `metrics.py` | Per-class precision/recall/F1, macro and weighted averages, balanced accuracy, top-k, ECE, binary sensitivity/specificity/ROC-AUC |
+| `failure_analysis.py` | Error breakdown, prediction gallery, Grad-CAM figures, Grad-CAM leaf-focus study |
+| `summarize.py` | Collects every run's `metrics.json` into `artifacts/reports/summary.md` |
 
-## Key Constraints
+```bash
+python -m src.evaluation.evaluate --checkpoint models/checkpoints/multiclass_mobilenet_v2/best.pt
+python -m src.evaluation.evaluate --checkpoint ... --variant segmented   # background removed
+python -m src.evaluation.failure_analysis --checkpoint ...
+```
 
-- Evaluation must always be run on the **held-out test set**, never the validation set.
-- The test set must be verified as leakage-free (via `leaf_id` audit) before evaluation.
-- Evaluation results must not be used to tune hyperparameters; that role belongs to the validation set.
-- No implementation code exists in this directory yet.
+Guard rails:
 
-## Status
+* evaluating on `test` aborts unless `data/splits/leakage_audit.json` says `"passed": true`;
+* nothing here touches the training or validation data for anything other than reporting;
+* multiclass runs also report healthy-vs-diseased metrics derived from the 38-class probabilities,
+  which is what the binary models are compared against.
 
-Empty placeholder. Implementation begins in Week 3 (see `ROADMAP.md`).
+Outputs land in `artifacts/reports/<run>/<split>/` and `artifacts/figures/<run>/`.

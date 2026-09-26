@@ -42,3 +42,9 @@ Specifically:
 - Release tag format: `v1.0.0`
 - Include a release changelog in the GitHub release notes
 - Announce the Hugging Face link in the GitHub README after release
+
+---
+
+## Status
+
+In progress. `RELEASE_CHECKLIST.md` is filled in from evidence, and `scripts/check_release.py` re-checks the claims (links, placeholders, audit, artifacts, licence files, no data or weights in git). Tagging is left to the maintainers.

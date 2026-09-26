@@ -1,103 +1,66 @@
-# Roadmap — Plant Disease Classification
+# Roadmap
 
-> This roadmap outlines the planned work across 5 weeks.
-> Tasks are not assigned to individuals.
-> All timelines are targets, not commitments.
+## Where the project stands
 
----
+The v1.0 scope is complete: a leaf-level, audited split; two tasks (healthy vs diseased, 38 disease
+classes) trained with two backbones (MobileNetV2, EfficientNet-B0); per-class metrics, confusion
+matrices, calibration, Grad-CAM and failure analysis on the held-out test set; exported weights,
+a demo app and a Hugging Face release package.
 
-## Week 1 — Foundation and Dataset Handling
+Results: `artifacts/reports/summary.md` and `docs/results.md`. Numbers, caveats and intended use:
+`MODEL_CARD.md`.
 
-**Goal:** Establish a solid foundation before any modeling work begins.
+| Area | Delivered |
+|---|---|
+| Data | Pinned download with checksum verification, leaf grouping, leaf-level split, leakage audit in CI |
+| Training | Config-driven, resumable, AMP, class weighting, early stopping on macro-F1 |
+| Evaluation | Per-class metrics, macro/weighted averages, top-k, calibration (ECE, reliability), confusion matrices |
+| Explainability | Grad-CAM on correct and incorrect predictions, Grad-CAM leaf-focus measurement against segmented masks |
+| Robustness | Same test images with the background removed |
+| Packaging | safetensors + ONNX export, Gradio demo, Hugging Face model repo and Space, model card |
+| Quality | 36 unit tests, ruff, CI, manifest audit script |
 
-- [ ] Finalize repository structure and documentation
-- [ ] Download PlantVillage dataset from official source
-- [ ] Verify dataset integrity (file counts, class distributions, image formats)
-- [ ] Implement `leaf_id`-based train/val/test split generation
-- [ ] Commit split manifest files to `data/splits/`
-- [ ] Document split policy and leakage prevention strategy
-- [ ] Define and document planned data augmentation strategy
-- [ ] Create `configs/base_config.yaml` placeholder
-- [ ] Populate `00_dataset_inspection.ipynb` with dataset overview
+## What we would do next
 
-**Exit criteria:** Split manifests are committed. Leakage guard is in place. Dataset notes are documented.
+Ordered by how much they would change the conclusions, not by how easy they are.
 
----
+### 1. Field images (the one that matters)
 
-## Week 2 — Baseline Training Setup
+Every number in this repository describes single leaves on a plain background in a lab. That is a
+ceiling on what can be claimed, and no amount of tuning on PlantVillage moves it. The next real step
+is a few hundred annotated field photos, used purely as an external test set — not for training.
+Until that exists, the honest statement stays "unknown field performance".
 
-**Goal:** Run first training experiments for both classification tracks.
+### 2. Background robustness
 
-- [ ] Implement `PlantVillageDataset` class in `src/data/`
-- [ ] Implement transforms and augmentation pipeline
-- [ ] Define MobileNetV2 fine-tuning wrapper in `src/models/`
-- [ ] Define EfficientNet B0 fine-tuning wrapper in `src/models/`
-- [ ] Implement training loop with logging in `src/training/`
-- [ ] Run binary classification (healthy vs. unhealthy) baseline
-- [ ] Run multiclass classification baseline
-- [ ] Save initial checkpoints to `models/checkpoints/`
-- [ ] Log experiment hyperparameters to `configs/`
+The background-removed evaluation tells us how much of the decision depends on the leaf itself.
+Depending on how large that gap is, candidate interventions are: training on segmented images,
+mixing colour and segmented copies, or background randomisation. Each needs the same leaf-level
+audit, because the segmented copies share leaves with the colour ones.
 
-**Exit criteria:** Both classification tracks produce first checkpoint outputs.
+### 3. Better use of the held-out data
 
----
+* Cross-validation over the leaf groups instead of a single split, to put error bars on per-class
+  F1 — some classes have fewer than 40 test images.
+* Test-time augmentation and temperature scaling; calibration matters more than accuracy if the
+  model is ever used with a confidence threshold.
 
-## Week 3 — Evaluation and Visualizers
+### 4. Modelling
 
-**Goal:** Measure performance rigorously and produce explainability artifacts.
+* Stronger backbones (ConvNeXt-T, EfficientNetV2-S) as a reference point for how much the current
+  numbers are limited by capacity rather than by data.
+* Hierarchical evaluation: crop first, then disease. Crop identity is easy; the disease decision
+  inside a crop is the interesting part, and reporting it separately would be more informative.
+* Distillation to a small model for mobile use, once there is field data worth deploying against.
 
-- [ ] Implement evaluation runner in `src/evaluation/`
-- [ ] Compute per-class precision, recall, F1 for both tracks
-- [ ] Generate and export confusion matrices to `artifacts/figures/`
-- [ ] Implement Grad-CAM in `src/visualization/`
-- [ ] Generate Grad-CAM heatmaps for a representative sample of correct and incorrect predictions
-- [ ] Export Grad-CAM figures to `artifacts/figures/`
-- [ ] Populate `03_evaluation_plan.ipynb` with evaluation walkthrough
+### 5. Data quality
 
-**Exit criteria:** Evaluation metrics and confusion matrices are exported. Grad-CAM visualizations are committed to `artifacts/`.
+* The 13k images with no author leaf id are the weakest part of the split. A manual pass over a
+  sample would tell us how good the camera-sequence heuristic really is.
+* Label noise in PlantVillage is unquantified; a review of the most confident errors would show
+  whether some of them are annotation mistakes rather than model failures.
 
----
+## Out of scope
 
-## Week 4 — Demo and Packaging
-
-**Goal:** Prepare project for sharing and begin release documentation.
-
-- [ ] Build sample predictions gallery in a Colab notebook
-- [ ] Document failure cases (systematic misclassification patterns)
-- [ ] Export sample outputs to `artifacts/sample_outputs/`
-- [ ] Draft complete model card in `MODEL_CARD_DRAFT.md`
-- [ ] Verify dataset license and attribution
-- [ ] Begin Hugging Face packaging preparation
-- [ ] Export model to ONNX or TorchScript in `models/exported/` (optional)
-- [ ] Populate `04_demo_plan.ipynb`
-
-**Exit criteria:** Model card draft is complete. License is verified. Demo artifacts are committed.
-
----
-
-## Week 5 — Final Validation and Release Prep
-
-**Goal:** Close all open items and prepare for public release.
-
-- [ ] Complete all items in `RELEASE_CHECKLIST.md`
-- [ ] Run final `leaf_id` leakage audit and document results
-- [ ] Finalize evaluation reports in `artifacts/reports/`
-- [ ] Finalize model card
-- [ ] Finalize `CITATION.md`
-- [ ] Prepare Hugging Face release materials (pending license confirmation)
-- [ ] Tag GitHub release
-- [ ] Close all planning issues with completion notes
-
-**Exit criteria:** `RELEASE_CHECKLIST.md` fully checked. Repository is tagged and ready for public review.
-
----
-
-## Future Directions (Post-Release)
-
-These are not in scope for the current release but may be explored later:
-
-- Field image testing to assess real-world generalization
-- Multi-label classification for mixed infections
-- Lightweight model distillation for mobile deployment
-- Integration with a Hugging Face Space for interactive demos
-- Cross-dataset generalization experiments
+Field deployment, treatment recommendations, multi-label or severity prediction, and any claim about
+performance outside the PlantVillage distribution.

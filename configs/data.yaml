@@ -1,0 +1,32 @@
+# Dataset ingestion, leaf grouping and split policy.
+# Used by: python -m src.data.prepare --config configs/data.yaml
+
+source:
+  # Pinned revision of https://huggingface.co/datasets/mohanty/PlantVillage
+  hf_repo: mohanty/PlantVillage
+  revision: 9e97599868962bd0079b8db4b7f1efa9185fa1e7
+  zip_file: data.zip
+  zip_sha256: fba30c6a7965e49be94b47a62f8aff6cfb1c35c27f475f22092b56db41745e84
+  leaf_map_file: leaf_grouping/leaf-map.json
+  leaf_map_sha256: 3b4b253683c6911744959a3870a92509b1faa1ee34e9f8585e21d0fe6337a25b
+  variants: [color, segmented]
+
+paths:
+  raw_dir: data/raw
+  image_root: data/raw/plantvillage
+  interim_dir: data/interim
+  splits_dir: data/splits
+
+grouping:
+  # Images without an author leaf id are split as contiguous segments of their
+  # camera sequence; held-out images within this many frame numbers of an image
+  # from a higher-priority split (train > test > val) are then excluded.
+  # 99% of known leaves span <= 20 frame numbers, the median is 3.
+  # See data/splits/README.md and grouping_calibration.csv.
+  frame_buffer: 20
+  # Buffers tried in the residual-leakage simulation.
+  calibration_buffers: [0, 5, 10, 20, 30]
+
+split:
+  seed: 42
+  ratios: {train: 0.70, val: 0.15, test: 0.15}

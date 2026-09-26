@@ -1,23 +1,21 @@
-# src/data/
+# src/data
 
-This directory will contain all code related to dataset loading, preprocessing, and split management.
+Everything between "a zip on the internet" and "a DataLoader".
 
-## Planned Contents
-
-| Module | Purpose |
+| Module | What it does |
 |---|---|
-| `dataset.py` | `PlantVillageDataset` PyTorch Dataset class |
-| `transforms.py` | Data augmentation and preprocessing pipelines |
-| `splits.py` | `leaf_id`-based train/val/test split generation and validation |
-| `loaders.py` | DataLoader factory functions |
+| `prepare.py` | CLI: download at a pinned revision, verify checksums, extract, group, split, audit, write `data/splits/` |
+| `labels.py` | The 38 class names (order fixed forever), binary mapping, display names |
+| `grouping.py` | Rebuilds a leaf id per image from the author leaf map, camera file names and duplicates |
+| `splits.py` | Leaf-group split, contiguous split for id-less camera sequences, frame-buffer purge, leakage audit |
+| `calibration.py` | Simulates the sequence rule on images that do have leaf ids, to choose the frame buffer |
+| `dataset.py` | `PlantVillageDataset` (colour or segmented variant) and the DataLoader factory |
+| `transforms.py` | Train/eval pipelines; see `docs/augmentation.md` for the reasoning |
 
-## Key Constraints
+Rules that are enforced in code, not just documented:
 
-- All train/val/test splits must be generated at the **`leaf_id` level** to prevent data leakage.
-  See `DATASET_NOTES.md` and issue `#02_leaf_id_leakage_guard.md` for details.
-- Augmentation must be applied **only to the training split**, never to validation or test splits.
-- Dataset files must **not** be committed to the repository.
+* augmentation is applied to the training split only (`build_transforms(train=...)`);
+* a group never spans two splits, and `audit_splits` re-checks this from the manifest alone;
+* images are never written back to disk, so the files always match the published checksums.
 
-## Status
-
-Empty placeholder. Implementation begins in Week 2 (see `ROADMAP.md`).
+Start here: `data/splits/README.md` explains the split policy and its audit.

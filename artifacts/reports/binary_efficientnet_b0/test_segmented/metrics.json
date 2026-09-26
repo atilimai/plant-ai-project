@@ -1,0 +1,54 @@
+{
+  "n_samples": 7611,
+  "accuracy": 0.9734594665615557,
+  "balanced_accuracy": 0.9577996390817457,
+  "macro_precision": 0.9765525534899973,
+  "macro_recall": 0.9577996390817457,
+  "macro_f1": 0.9666108175754458,
+  "weighted_precision": 0.9736909514252313,
+  "weighted_recall": 0.9734594665615557,
+  "weighted_f1": 0.9731932295542627,
+  "per_class": [
+    {
+      "class": "healthy",
+      "precision": 0.9831265508684863,
+      "recall": 0.9218241042345277,
+      "f1": 0.9514889529298751,
+      "support": 2149
+    },
+    {
+      "class": "diseased",
+      "precision": 0.9699785561115082,
+      "recall": 0.9937751739289638,
+      "f1": 0.9817326822210165,
+      "support": 5462
+    }
+  ],
+  "ece": 0.05854543693086629,
+  "roc_auc": 0.9914991585332835,
+  "average_precision": 0.9937749828993134,
+  "sensitivity": 0.9937751739289638,
+  "specificity": 0.9218241042345277,
+  "false_negatives": 34,
+  "false_positives": 168,
+  "run": "binary_efficientnet_b0",
+  "task": "binary",
+  "arch": "efficientnet_b0",
+  "split": "test",
+  "variant": "segmented",
+  "loss": 0.12282136047016445,
+  "top_confusions": [
+    {
+      "true": "healthy",
+      "predicted": "diseased",
+      "count": 168,
+      "share_of_true_class": 0.0781758957654723
+    },
+    {
+      "true": "diseased",
+      "predicted": "healthy",
+      "count": 34,
+      "share_of_true_class": 0.006224826071036251
+    }
+  ]
+}

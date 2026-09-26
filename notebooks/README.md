@@ -1,26 +1,36 @@
-# notebooks/
+# notebooks
 
-This directory contains Colab-compatible Jupyter notebooks for the plant disease classification project.
+Five notebooks, meant to be read in order. They are thin: the logic lives in `src/`, the notebooks
+call it and show the results, so a notebook cannot drift away from what the scripts do.
 
-## Notebook Index
-
-| Notebook | Purpose | Status |
+| Notebook | Covers | Issues |
 |---|---|---|
-| `00_dataset_inspection.ipynb` | Dataset overview, class distribution, sample visualization, split validation | Placeholder |
-| `01_binary_experiment_plan.ipynb` | Binary classification training walkthrough (healthy vs. unhealthy) | Placeholder |
-| `02_multiclass_experiment_plan.ipynb` | Multiclass classification training walkthrough (per-disease) | Placeholder |
-| `03_evaluation_plan.ipynb` | Evaluation pipeline, metrics display, confusion matrices, Grad-CAM | Placeholder |
-| `04_demo_plan.ipynb` | End-to-end inference demo, sample gallery, predictions with Grad-CAM | Placeholder |
+| `00_dataset_inspection.ipynb` | Download and checksum, class distribution, sample images, leaf grouping, the committed split and its audit, augmentation check | #01, #02, #05 |
+| `01_binary_experiment_plan.ipynb` | Healthy vs diseased: config, training, learning curves | #03 |
+| `02_multiclass_experiment_plan.ipynb` | 38 classes: config, training, learning curves | #04 |
+| `03_evaluation_plan.ipynb` | Test metrics, confusion matrices, calibration, Grad-CAM, failure analysis | #06–#08, #10 |
+| `04_demo_plan.ipynb` | Inference from an exported model or the Hub, Grad-CAM, prediction gallery | #09, #14 |
 
-## Colab Usage
+## Running them
 
-All notebooks are designed to run on **Google Colab** without a local GPU.
+**Colab** — open with the badge at the top of each notebook. The first cell clones the repository
+and installs `requirements.txt`. Pick a GPU runtime for 01–03 (*Runtime → Change runtime type*).
+Notebook 00 downloads 2.2 GB of images.
 
-Typical setup per notebook:
-1. Mount Google Drive or configure Hugging Face Datasets access
-2. Run the `!pip install` cell at the top for dependencies
-3. Follow the notebook sections in order
+**Locally** — from the repository root:
 
-## Status
+```bash
+pip install -r requirements-dev.txt
+jupyter lab notebooks/
+```
 
-All notebooks are currently placeholder files only. They will be populated progressively as implementation tasks (Issues #01–#14) are completed.
+The first cell walks up to the repository root, so notebooks work from any working directory and
+contain no absolute paths.
+
+## Conventions
+
+* Training and evaluation cells are behind a `RUN_TRAINING` / `RUN_EVALUATION` flag, off by default,
+  so opening a notebook never starts a multi-hour job by accident. The results shown come from the
+  committed artifacts.
+* Figures are embedded as downscaled JPEGs to keep the files reviewable in git.
+* Test-set numbers only appear in notebook 03, and only after the leakage audit has passed.

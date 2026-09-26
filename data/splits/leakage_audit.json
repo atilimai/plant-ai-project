@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "n_images": {
+    "train": 38011,
+    "val": 7516,
+    "test": 7770
+  },
+  "n_groups": {
+    "train": 13996,
+    "val": 2414,
+    "test": 2639
+  },
+  "overlaps": {
+    "group_id": {
+      "train-val": 0,
+      "train-test": 0,
+      "val-test": 0
+    },
+    "leaf_key": {
+      "train-val": 0,
+      "train-test": 0,
+      "val-test": 0
+    },
+    "identifier_in_class": {
+      "train-val": 0,
+      "train-test": 0,
+      "val-test": 0
+    },
+    "md5": {
+      "train-val": 0,
+      "train-test": 0,
+      "val-test": 0
+    }
+  },
+  "frame_buffer_violations": 0,
+  "classes_missing": {
+    "train": [],
+    "val": [],
+    "test": []
+  },
+  "frame_buffer": 20
+}

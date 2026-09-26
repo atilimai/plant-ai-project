@@ -1,23 +1,15 @@
-# src/models/
+# src/models
 
-This directory will contain model architecture definitions and fine-tuning wrappers.
+`factory.py` is the whole module.
 
-## Planned Contents
+* `build_model(arch, num_classes)` — torchvision MobileNetV2 or EfficientNet-B0 with ImageNet
+  weights and a fresh `Dropout + Linear` head. Both backbones expose `features`, which keeps the
+  rest of the code architecture-agnostic.
+* `gradcam_layer(model)` — the last convolutional block, 7×7 at 224 px input: the deepest layer
+  that still has spatial resolution, so the most class-specific map we can put back on the image.
+* `parameter_groups(...)` — splits parameters into backbone/head and decay/no-decay. Pretrained
+  layers get a smaller learning rate; norm layers and biases get no weight decay.
+* `set_backbone_trainable(...)` — used by `train.freeze_backbone_epochs` for head-only warm-up.
 
-| Module | Purpose |
-|---|---|
-| `mobilenetv2.py` | MobileNetV2 fine-tuning wrapper for binary and multiclass classification |
-| `efficientnet_b0.py` | EfficientNet B0 fine-tuning wrapper for binary and multiclass classification |
-| `factory.py` | Model factory function to instantiate models by name from config |
-
-## Design Notes
-
-- Both model wrappers will support a configurable number of output classes
-  (2 for binary, N for multiclass).
-- The final classification head will replace the pre-trained classifier layer.
-- Pre-trained weights will be loaded from `torchvision.models` or `timm`.
-- No implementation code exists in this directory yet.
-
-## Status
-
-Empty placeholder. Implementation begins in Week 2 (see `ROADMAP.md`).
+Adding an architecture means adding one entry to `ARCHITECTURES`, as long as it follows the
+`features` + `classifier[-1]` layout; anything else also needs a `gradcam_layer` branch.

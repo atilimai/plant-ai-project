@@ -1,0 +1,42 @@
+seed: 42
+device: auto
+output_dir: models/checkpoints
+data:
+  manifest: data/splits/manifest.csv
+  image_root: data/raw/plantvillage
+  image_size: 224
+  batch_size: 64
+  num_workers: 8
+  subset_fraction: 1.0
+augmentation:
+  crop_scale:
+  - 0.6
+  - 1.0
+  right_angle_rotation: true
+  color_jitter:
+    brightness: 0.2
+    contrast: 0.2
+    saturation: 0.2
+    hue: 0.02
+  color_jitter_p: 0.8
+model:
+  pretrained: true
+  dropout: 0.2
+  arch: mobilenet_v2
+train:
+  epochs: 15
+  lr: 0.001
+  backbone_lr_mult: 0.3
+  weight_decay: 0.05
+  warmup_epochs: 1
+  label_smoothing: 0.1
+  class_weighting: inverse_sqrt
+  grad_clip: 5.0
+  amp: true
+  channels_last: false
+  monitor: macro_f1
+  early_stopping_patience: 4
+  freeze_backbone_epochs: 0
+  resume: true
+run_name: binary_mobilenet_v2
+task: binary

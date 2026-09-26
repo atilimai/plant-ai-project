@@ -13,12 +13,12 @@ A predictions gallery provides human-interpretable evidence of model behavior th
 
 ## Acceptance Criteria
 
-- [ ] Gallery shows at least 20 sample images with predicted label, true label, and confidence score
-- [ ] Includes a mix of correct predictions, borderline correct predictions, and clear errors
-- [ ] Includes samples from multiple plant species and disease classes
-- [ ] Exported as a figure grid to `artifacts/sample_outputs/`
-- [ ] Presented in a Colab-compatible notebook (linked from `notebooks/`)
-- [ ] Images are labeled clearly and legibly in the figure
+- [x] Gallery shows at least 20 sample images with predicted label, true label, and confidence score
+- [x] Includes a mix of correct predictions, borderline correct predictions, and clear errors
+- [x] Includes samples from multiple plant species and disease classes
+- [x] Exported as a figure grid to `artifacts/sample_outputs/`
+- [x] Presented in a Colab-compatible notebook (linked from `notebooks/`)
+- [x] Images are labeled clearly and legibly in the figure
 
 ## Dependencies
 
@@ -31,3 +31,9 @@ A predictions gallery provides human-interpretable evidence of model behavior th
 - Avoid cherry-picking only easy or impressive examples — include representative failure modes
 - Caption each image with the actual predicted class, ground-truth class, and confidence
 - This gallery will be referenced in the model card and Hugging Face Space (if created)
+
+---
+
+## Status
+
+Done. Confidence-stratified gallery (confident hits, borderline hits, most confident errors) in `artifacts/sample_outputs/<run>/prediction_gallery.jpg`, built by `src/visualization/gallery.py` and shown in `notebooks/04_demo_plan.ipynb`.

@@ -13,12 +13,12 @@ PlantVillage images are captured under controlled conditions, meaning the model 
 
 ## Acceptance Criteria
 
-- [ ] Augmentation strategy is documented (list of transforms and their rationale)
-- [ ] Augmentation pipeline is implemented in `src/data/`
-- [ ] Augmentation is applied only to training split, not validation or test splits
-- [ ] Visual sanity check: augmented samples are inspected to confirm labels are preserved
-- [ ] Augmentation config parameters are stored in `configs/`
-- [ ] Any decisions about augmentation strength or excluded transforms are documented
+- [x] Augmentation strategy is documented (list of transforms and their rationale)
+- [x] Augmentation pipeline is implemented in `src/data/`
+- [x] Augmentation is applied only to training split, not validation or test splits
+- [x] Visual sanity check: augmented samples are inspected to confirm labels are preserved
+- [x] Augmentation config parameters are stored in `configs/`
+- [x] Any decisions about augmentation strength or excluded transforms are documented
 
 ## Dependencies
 
@@ -35,3 +35,9 @@ Planned augmentation candidates (to be finalized during implementation):
 
 Do not apply destructive augmentations that could make diseased features unrecognizable.
 Test augmentation effects on a small sample before committing to the full pipeline.
+
+---
+
+## Status
+
+Done. Strategy, the transforms we use and the ones we deliberately rejected: `docs/augmentation.md`. Implemented in `src/data/transforms.py`, applied to the training split only, parameters in `configs/train_base.yaml`, visual check in `notebooks/00_dataset_inspection.ipynb`.

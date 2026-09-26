@@ -13,14 +13,14 @@ This project targets a Colab-first workflow. The notebooks are the primary user-
 
 ## Acceptance Criteria
 
-- [ ] `00_dataset_inspection.ipynb` covers dataset loading, class distribution, and sample visualization
-- [ ] `01_binary_experiment_plan.ipynb` covers binary training setup, config, and run instructions
-- [ ] `02_multiclass_experiment_plan.ipynb` covers multiclass training setup, config, and run instructions
-- [ ] `03_evaluation_plan.ipynb` covers loading a checkpoint, running evaluation, and displaying metrics
-- [ ] `04_demo_plan.ipynb` covers running inference on new images and displaying results with Grad-CAM
-- [ ] Each notebook has a clear title, purpose description, and section headers
-- [ ] All notebooks are runnable end-to-end on Colab (with Drive or Hugging Face dataset access)
-- [ ] Notebooks do not contain hardcoded local paths
+- [x] `00_dataset_inspection.ipynb` covers dataset loading, class distribution, and sample visualization
+- [x] `01_binary_experiment_plan.ipynb` covers binary training setup, config, and run instructions
+- [x] `02_multiclass_experiment_plan.ipynb` covers multiclass training setup, config, and run instructions
+- [x] `03_evaluation_plan.ipynb` covers loading a checkpoint, running evaluation, and displaying metrics
+- [x] `04_demo_plan.ipynb` covers running inference on new images and displaying results with Grad-CAM
+- [x] Each notebook has a clear title, purpose description, and section headers
+- [x] All notebooks are runnable end-to-end on Colab (with Drive or Hugging Face dataset access)
+- [x] Notebooks do not contain hardcoded local paths
 
 ## Dependencies
 
@@ -33,3 +33,9 @@ This project targets a Colab-first workflow. The notebooks are the primary user-
 - Notebooks should mount Google Drive or use `datasets` library for dataset access
 - Include a `!pip install` cell at the top of each notebook for required dependencies
 - Each notebook should be self-contained enough to run independently after dataset setup
+
+---
+
+## Status
+
+Done. `notebooks/00`–`04` are Colab-ready (clone + install cell, no absolute paths, GPU runtime metadata). Long-running cells sit behind a flag so opening a notebook never starts a training run.

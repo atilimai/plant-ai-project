@@ -13,13 +13,13 @@ Understanding *how* the model fails is as important as knowing its aggregate acc
 
 ## Acceptance Criteria
 
-- [ ] All test set misclassifications are collected and analyzed
-- [ ] Failure cases are grouped into meaningful categories (e.g., confused class pairs, low-confidence errors, ambiguous images)
-- [ ] Root cause hypotheses are documented for each failure category
-- [ ] Grad-CAM visualizations are included for representative failure cases
-- [ ] Quantitative breakdown of failure rates by class or category is provided
-- [ ] Report exported to `artifacts/reports/`
-- [ ] Analysis is presented in a Colab-compatible notebook
+- [x] All test set misclassifications are collected and analyzed
+- [x] Failure cases are grouped into meaningful categories (e.g., confused class pairs, low-confidence errors, ambiguous images)
+- [x] Root cause hypotheses are documented for each failure category
+- [x] Grad-CAM visualizations are included for representative failure cases
+- [x] Quantitative breakdown of failure rates by class or category is provided
+- [x] Report exported to `artifacts/reports/`
+- [x] Analysis is presented in a Colab-compatible notebook
 
 ## Dependencies
 
@@ -33,3 +33,9 @@ Understanding *how* the model fails is as important as knowing its aggregate acc
 - Consider whether failures are concentrated in specific plant species or disease categories
 - Document any failure modes that suggest the model is using background cues rather than leaf features
 - This analysis informs the limitations section of the model card
+
+---
+
+## Status
+
+Done. `src/evaluation/failure_analysis.py` writes an error breakdown per run (`artifacts/reports/<run>/failure_analysis.md`): confusion pairs, error rate per crop, same-crop vs cross-crop errors, healthy/diseased direction, confidence of errors, Grad-CAM leaf focus and the background-changed comparison. Interpretation in `docs/results.md`.

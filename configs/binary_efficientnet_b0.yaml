@@ -1,0 +1,6 @@
+base: train_base.yaml
+run_name: binary_efficientnet_b0
+task: binary
+
+model:
+  arch: efficientnet_b0

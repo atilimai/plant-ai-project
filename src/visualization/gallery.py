@@ -1,31 +1,78 @@
+from __future__ import annotations
+
+import textwrap
+from pathlib import Path
+
 import matplotlib.pyplot as plt
 import numpy as np
-import os
+import pandas as pd
+from PIL import Image
 
-def plot_prediction_gallery(images, true_labels, pred_labels, confidences, class_names, n_rows=4, n_cols=5):
+from src.data.labels import pretty_name
+from src.visualization.plots import save_figure
 
-    n_images = n_rows * n_cols
-    plt.figure(figsize=(20, 16))
 
-    for i in range(n_images):
-        plt.subplot(n_rows, n_cols, i + 1)
+def _label(name: str) -> str:
+    return pretty_name(name) if "___" in name else name
 
-        if len(images) > i:
-            plt.imshow(images[i])
-        else:
-            plt.imshow(np.ones((224, 224, 3)) * 0.8)
 
-        is_correct = pred_labels[i] == true_labels[i]
-        color = 'green' if is_correct else 'red'
+def pick_gallery_rows(predictions: pd.DataFrame, n_correct: int = 10, n_borderline: int = 5,
+                      n_errors: int = 9, seed: int = 0) -> pd.DataFrame:
+    """Confidence-stratified sample, so the gallery is not a highlight reel.
 
-        plt.title(f"Pred: {class_names[pred_labels[i]]}\nTrue: {class_names[true_labels[i]]}\nConf: {confidences[i]:.2f}",
-                  color=color, fontsize=10)
+    * correct: confident correct predictions, at most one per class,
+    * borderline: correct but with confidence below 0.7 (or the least confident ones),
+    * errors: the most confident mistakes first, one per true class where possible.
+    """
+    correct = predictions[predictions["correct"]]
+    wrong = predictions[~predictions["correct"]]
 
-        plt.axis('off')
+    confident = correct[correct["confidence"] >= 0.9].groupby("true").sample(1, random_state=seed)
+    confident = confident.sample(min(n_correct, len(confident)), random_state=seed)
+    if len(confident) < n_correct:  # weak model or few classes: top up with the most confident hits
+        rest = correct.drop(confident.index).nlargest(n_correct - len(confident), "confidence")
+        confident = pd.concat([confident, rest])
 
-    plt.tight_layout()
+    correct = correct.drop(confident.index)
+    borderline = correct[correct["confidence"] < 0.7]
+    if len(borderline) < n_borderline:
+        borderline = correct.nsmallest(n_borderline, "confidence")
+    borderline = borderline.sample(min(n_borderline, len(borderline)), random_state=seed)
 
-    save_path = 'artifacts/sample_outputs/'
-    os.makedirs(save_path, exist_ok=True)
-    plt.savefig(os.path.join(save_path, 'prediction_gallery.png'), dpi=300)
-    plt.show()
+    errors = wrong.sort_values("confidence", ascending=False).drop_duplicates("true").head(n_errors)
+    if len(errors) < n_errors:
+        rest = wrong.drop(errors.index).sort_values("confidence", ascending=False)
+        errors = pd.concat([errors, rest.head(n_errors - len(errors))])
+
+    return pd.concat([
+        confident.assign(kind="correct"),
+        borderline.assign(kind="borderline"),
+        errors.assign(kind="error"),
+    ])
+
+
+def plot_prediction_gallery(rows: pd.DataFrame, image_root: str | Path, n_cols: int = 6,
+                            title: str | None = None, save_path: str | Path | None = None):
+    image_root = Path(image_root)
+    n_rows = int(np.ceil(len(rows) / n_cols))
+    fig, axes = plt.subplots(n_rows, n_cols, figsize=(2.9 * n_cols, 3.5 * n_rows))
+    colors = {"correct": "#1a7f37", "borderline": "#9a6700", "error": "#cf222e"}
+
+    for ax, (_, row) in zip(axes.flat, rows.iterrows()):
+        with Image.open(image_root / row["path"]) as im:
+            ax.imshow(im.convert("RGB"))
+        caption = (
+            f"pred: {_label(row['predicted'])}\n"
+            f"true: {_label(row['true'])}\n"
+            f"conf {row['confidence']:.2f} · {row['kind']}"
+        )
+        caption = "\n".join(textwrap.shorten(line, 38, placeholder="…") for line in caption.split("\n"))
+        ax.set_title(caption, fontsize=8, color=colors[row["kind"]], loc="left")
+        ax.axis("off")
+    for ax in list(axes.flat)[len(rows):]:
+        ax.axis("off")
+
+    if title:
+        fig.suptitle(title, fontsize=12)
+    fig.tight_layout()
+    return save_figure(fig, save_path)

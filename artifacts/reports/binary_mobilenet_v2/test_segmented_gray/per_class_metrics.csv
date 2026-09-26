@@ -1,0 +1,3 @@
+class,precision,recall,f1,support
+healthy,0.9378,0.9404,0.9391,2149
+diseased,0.9765,0.9755,0.9760,5462

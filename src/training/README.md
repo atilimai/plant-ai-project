@@ -1,24 +1,26 @@
-# src/training/
+# src/training
 
-This directory will contain the training loop, optimizer setup, and training configuration utilities.
+`trainer.py` holds the loop, `train.py` is the CLI:
 
-## Planned Contents
+```bash
+python -m src.training.train --config configs/multiclass_mobilenet_v2.yaml
+python -m src.training.train --config configs/binary_mobilenet_v2.yaml train.epochs=3 data.batch_size=32
+```
 
-| Module | Purpose |
+What the loop does: AdamW with separate backbone/head learning rates, linear warm-up into cosine
+decay per step, label smoothing, optional class weighting, gradient clipping, AMP and
+`channels_last` on CUDA, early stopping on validation macro-F1.
+
+Each run writes `models/checkpoints/<run_name>/`:
+
+| File | Contents |
 |---|---|
-| `trainer.py` | Main training loop with logging, checkpointing, and early stopping |
-| `optimizer.py` | Optimizer and learning rate scheduler factory |
-| `callbacks.py` | Training callbacks (optional, e.g., checkpoint saver, metric logger) |
+| `best.pt` / `last.pt` | Weights, optimizer, scheduler, scaler, epoch, full history, config and the metadata inference needs (arch, class names, image size, normalisation) |
+| `history.csv` | One row per epoch |
+| `config.yaml` | The resolved config, after inheritance and CLI overrides |
 
-## Design Notes
+Checkpoints are written to a temporary file and renamed, so a Colab disconnect mid-save cannot
+leave a corrupt file. Re-running the same command resumes from `last.pt`; a run that started on CPU
+can continue on GPU.
 
-- The training loop will support both binary and multiclass classification tracks
-  with minimal configuration changes.
-- Checkpoints will be saved to `models/checkpoints/`.
-- Experiment hyperparameters will be loaded from `configs/` YAML files.
-- Training is designed to run on Google Colab (T4 or A100 GPU).
-- No implementation code exists in this directory yet.
-
-## Status
-
-Empty placeholder. Implementation begins in Week 2 (see `ROADMAP.md`).
+Validation metrics are for model selection only. Test numbers come from `src/evaluation`.

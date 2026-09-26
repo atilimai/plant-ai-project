@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Dataset files are never committed; only manifests under data/splits are.
+data/raw/*
+data/interim/*
+data/processed/*
+!data/**/.gitkeep
+!data/**/README.md
+
+# Model weights live on the Hugging Face Hub, not in git.
+models/checkpoints/*
+models/exported/*
+!models/**/.gitkeep
+
+# Local run outputs
+runs/
+wandb/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Built by scripts/build_hf_release.py, uploaded to the Hub rather than committed
+release/

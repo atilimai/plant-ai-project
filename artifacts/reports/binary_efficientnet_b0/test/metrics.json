@@ -1,0 +1,54 @@
+{
+  "n_samples": 7770,
+  "accuracy": 0.9984555984555985,
+  "balanced_accuracy": 0.9980702889988509,
+  "macro_precision": 0.9980702889988509,
+  "macro_recall": 0.9980702889988509,
+  "macro_f1": 0.9980702889988509,
+  "weighted_precision": 0.9984555984555985,
+  "weighted_recall": 0.9984555984555985,
+  "weighted_f1": 0.9984555984555985,
+  "per_class": [
+    {
+      "class": "healthy",
+      "precision": 0.9972080037226617,
+      "recall": 0.9972080037226617,
+      "f1": 0.9972080037226617,
+      "support": 2149
+    },
+    {
+      "class": "diseased",
+      "precision": 0.99893257427504,
+      "recall": 0.99893257427504,
+      "f1": 0.99893257427504,
+      "support": 5621
+    }
+  ],
+  "ece": 0.0659973867534824,
+  "roc_auc": 0.9999889068522457,
+  "average_precision": 0.9999957790544304,
+  "sensitivity": 0.99893257427504,
+  "specificity": 0.9972080037226617,
+  "false_negatives": 6,
+  "false_positives": 6,
+  "run": "binary_efficientnet_b0",
+  "task": "binary",
+  "arch": "efficientnet_b0",
+  "split": "test",
+  "variant": "color",
+  "loss": 0.07115077696251593,
+  "top_confusions": [
+    {
+      "true": "diseased",
+      "predicted": "healthy",
+      "count": 6,
+      "share_of_true_class": 0.0010674257249599715
+    },
+    {
+      "true": "healthy",
+      "predicted": "diseased",
+      "count": 6,
+      "share_of_true_class": 0.002791996277338297
+    }
+  ]
+}

@@ -1,105 +1,71 @@
-# Project Plan — Plant Disease Classification
+# Project plan
 
 ## Goal
 
-Develop a plant disease classification system using the PlantVillage dataset and transfer learning.
-Deliver a reproducible pipeline covering data ingestion, model training, evaluation, visualization, and packaging, suitable for sharing via GitHub and Hugging Face.
+A plant disease classifier trained on PlantVillage whose reported numbers can be trusted: a
+train/val/test split made at the level of the physical leaf, an audit that proves no leaf crosses
+splits, per-class metrics, explainability artifacts, and an honest account of what the model cannot
+do.
 
----
+The accuracy number is not the deliverable. A reproducible pipeline and a defensible evaluation are.
 
-## Non-Goals
+## Non-goals
 
-- Real-time inference deployment or edge/mobile optimization
-- New dataset collection or annotation
-- Multi-modal or text-based disease explanation generation
-- Production-grade API or web service
-- Assigning tasks to specific individuals
+* Field deployment, mobile or edge optimisation.
+* New data collection or re-annotation.
+* Beating published PlantVillage leaderboards. Those numbers come from image-level splits and are
+  not comparable with ours (see `CITATION.md`).
+* A production API or service.
 
----
+## Definition of done
 
-## Definition of Done
+| Item | Status |
+|---|---|
+| Dataset downloaded at a pinned revision, checksums verified | Done — `configs/data.yaml`, `src/data/prepare.py` |
+| Leaf groups rebuilt; split made at leaf level; manifests committed | Done — `data/splits/manifest.csv` |
+| Leakage audit implemented, passing, and re-run in CI | Done — `data/splits/leakage_audit.json`, `scripts/audit_manifest.py` |
+| Binary track trained and evaluated | Done — `binary_mobilenet_v2`, `binary_efficientnet_b0` |
+| Multiclass track trained and evaluated | Done — `multiclass_mobilenet_v2`, `multiclass_efficientnet_b0` |
+| Per-class precision/recall/F1, macro and weighted averages, confusion matrices exported | Done — `artifacts/reports/`, `artifacts/figures/` |
+| Grad-CAM for correct and incorrect predictions | Done — `artifacts/figures/<run>/gradcam_*.jpg` |
+| Sample predictions gallery | Done — `artifacts/sample_outputs/<run>/` |
+| Failure case analysis | Done — `artifacts/reports/<run>/failure_analysis.md`, `docs/results.md` |
+| Model card completed with real numbers | Done — `MODEL_CARD.md` |
+| Dataset licence verified from a primary source | Done — `LICENSING.md` |
+| Unit tests and CI | Done — `tests/`, `.github/workflows/tests.yml` |
+| Hugging Face release prepared | Done — `scripts/build_hf_release.py`; publishing is a manual step |
+| Release checklist signed off | See `RELEASE_CHECKLIST.md` |
 
-The project is considered complete when all of the following are true:
+## How the work was organised
 
-- [ ] Dataset is downloaded, split by `leaf_id`, and split manifests are committed to `data/splits/`
-- [ ] Binary classification baseline is trained and evaluated
-- [ ] Multiclass classification baseline is trained and evaluated
-- [ ] Per-class precision, recall, F1, and confusion matrix are computed and exported to `artifacts/`
-- [ ] Grad-CAM visualizations are generated for representative samples
-- [ ] Sample predictions gallery is documented in a notebook
-- [ ] Failure case analysis is documented
-- [ ] Model card is completed and reviewed
-- [ ] Dataset license and attribution are verified
-- [ ] No train/test leakage has been confirmed via `leaf_id` audit
-- [ ] RELEASE_CHECKLIST.md is fully checked off
-- [ ] Repository is clean and ready for public review
+1. **Audit first.** Before writing any new code, the inherited repository was checked end to end.
+   The split was leaky, the reported metrics were invalid and the committed figures were generated
+   from random noise: `docs/previous_state_audit.md`.
+2. **Data integrity.** Leaf grouping rebuilt from the authors' leaf map plus file-name evidence;
+   images without a leaf id split by contiguous camera segments with a frame buffer, with the
+   residual leakage measured rather than assumed: `data/splits/README.md`.
+3. **Pipeline.** Dataset, transforms, model factory, trainer (resumable), evaluation, failure
+   analysis, export, demo — all driven by YAML configs and callable from Colab.
+4. **Experiments.** Two architectures × two tasks, identical recipe, one command:
+   `python scripts/run_experiments.py`.
+5. **Reporting.** Metrics, figures and the model card generated from the run outputs, with the
+   limitations stated next to the numbers.
 
----
+## Risks and how they were handled
 
-## Weekly Milestone Outline
+| Risk | Outcome |
+|---|---|
+| Data leakage via image-level splits | Addressed: leaf-level split, audit in CI, residual leakage for id-less images measured at ≈0 |
+| Dataset licence blocks release | Resolved: CC BY-SA 3.0, weights released under the same licence (`LICENSING.md`) |
+| Lab backgrounds inflate accuracy | Not solvable with this dataset; quantified instead (background-removed evaluation, Grad-CAM leaf focus) and stated in the model card |
+| Colab session timeouts | Training resumes from `last.pt`; checkpoints are written atomically |
+| Class imbalance (36×) | Class-weighted loss; macro-F1 and balanced accuracy reported alongside accuracy |
+| Small classes after the frame-buffer purge | Documented per class in `data/splits/README.md`; their metrics carry wider error bars |
 
-### Week 1 — Foundation and Dataset Handling
-- Set up repository structure (this scaffold)
-- Download PlantVillage dataset and verify integrity
-- Implement `leaf_id`-based train/val/test split logic
-- Document split policy in `data/splits/README.md`
-- Define data transforms and augmentation strategy
-- Create `00_dataset_inspection.ipynb` content
+## Release criteria
 
-### Week 2 — Baseline Training Setup
-- Implement dataset loader in `src/data/`
-- Define MobileNetV2 and EfficientNet B0 model wrappers in `src/models/`
-- Implement training loop in `src/training/`
-- Run binary classification baseline experiment
-- Run multiclass classification baseline experiment
-- Save checkpoints to `models/checkpoints/`
-- Log experiment configs to `configs/`
-
-### Week 3 — Evaluation and Visualizers
-- Implement evaluation runner in `src/evaluation/`
-- Compute per-class precision, recall, F1
-- Generate confusion matrix and export to `artifacts/figures/`
-- Implement Grad-CAM in `src/visualization/`
-- Generate Grad-CAM samples for correct and incorrect predictions
-- Document evaluation in `03_evaluation_plan.ipynb`
-
-### Week 4 — Demo and Packaging
-- Build sample predictions gallery in a notebook
-- Document failure case analysis
-- Draft model card in `MODEL_CARD_DRAFT.md`
-- Begin Hugging Face packaging preparation
-- Confirm dataset license and attribution
-
-### Week 5 — Final Validation and Release Prep
-- Complete `RELEASE_CHECKLIST.md` review
-- Confirm no data leakage via `leaf_id` audit
-- Finalize model card
-- Finalize evaluation reports in `artifacts/reports/`
-- Prepare Hugging Face release materials (pending license confirmation)
-- Tag release on GitHub
-
----
-
-## Risks
-
-| Risk | Likelihood | Impact | Mitigation |
-|---|---|---|---|
-| Data leakage via image-level splits | High | High | Enforce `leaf_id`-based splits from day one |
-| Dataset license restricts public release | Medium | High | Verify license early in Week 1 |
-| Controlled-background images inflate metrics | High | Medium | Document limitation clearly; consider field image testing |
-| Colab session timeouts during training | Medium | Medium | Save checkpoints frequently; use Colab Pro if needed |
-| Model underfits due to limited augmentation | Medium | Medium | Plan augmentation strategy in Week 1 |
-| EfficientNet B0 vs MobileNetV2 comparison complexity | Low | Low | Run both, pick best for demo |
-
----
-
-## Release Criteria
-
-Before tagging a public release:
-
-1. All items in `RELEASE_CHECKLIST.md` are checked
-2. Dataset license and attribution confirmed
-3. No data leakage confirmed by `leaf_id` audit
-4. Model card is complete
-5. Evaluation artifacts are exported and committed
-6. Repository passes a final documentation review
+1. `RELEASE_CHECKLIST.md` fully checked.
+2. Leakage audit passing on the committed manifest.
+3. Model card free of placeholders, with numbers matching `artifacts/reports/summary.md`.
+4. Licence and attribution verified (`LICENSING.md`).
+5. CI green on `main`.

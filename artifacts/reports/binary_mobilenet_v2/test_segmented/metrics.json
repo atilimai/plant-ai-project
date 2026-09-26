@@ -1,0 +1,54 @@
+{
+  "n_samples": 7611,
+  "accuracy": 0.9762186309289187,
+  "balanced_accuracy": 0.974398990682952,
+  "macro_precision": 0.9675171766905798,
+  "macro_recall": 0.974398990682952,
+  "macro_f1": 0.9708752827527249,
+  "weighted_precision": 0.9765062374612741,
+  "weighted_recall": 0.9762186309289187,
+  "weighted_f1": 0.9763055013133782,
+  "per_class": [
+    {
+      "class": "healthy",
+      "precision": 0.946866485013624,
+      "recall": 0.9702187063750581,
+      "f1": 0.958400367731556,
+      "support": 2149
+    },
+    {
+      "class": "diseased",
+      "precision": 0.9881678683675356,
+      "recall": 0.9785792749908458,
+      "f1": 0.9833501977738939,
+      "support": 5462
+    }
+  ],
+  "ece": 0.0599337765099482,
+  "roc_auc": 0.9965161386619922,
+  "average_precision": 0.9984195722670732,
+  "sensitivity": 0.9785792749908458,
+  "specificity": 0.9702187063750581,
+  "false_negatives": 117,
+  "false_positives": 64,
+  "run": "binary_mobilenet_v2",
+  "task": "binary",
+  "arch": "mobilenet_v2",
+  "split": "test",
+  "variant": "segmented",
+  "loss": 0.11334304749425303,
+  "top_confusions": [
+    {
+      "true": "diseased",
+      "predicted": "healthy",
+      "count": 117,
+      "share_of_true_class": 0.021420725009154155
+    },
+    {
+      "true": "healthy",
+      "predicted": "diseased",
+      "count": 64,
+      "share_of_true_class": 0.029781293624941835
+    }
+  ]
+}

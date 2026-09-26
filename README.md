@@ -1,225 +1,178 @@
-# Plant Disease Classification
+# Plant disease classification from leaf images
 
-> **⚠️ This repository is currently a scaffold only.**
-> No implementation code, trained models, or evaluation results exist yet.
-> All notebooks, source folders, and model directories are placeholders.
+[![tests](https://github.com/atilimai/plant-ai-project/actions/workflows/tests.yml/badge.svg)](https://github.com/atilimai/plant-ai-project/actions/workflows/tests.yml)
+[![licence: GPL-2.0](https://img.shields.io/badge/code-GPL--2.0-blue)](LICENSE)
+[![weights: CC BY-SA 3.0](https://img.shields.io/badge/weights-CC%20BY--SA%203.0-lightgrey)](LICENSING.md)
 
----
+Leaf disease classifiers trained on PlantVillage, with the part that usually goes wrong done
+properly: **the train/validation/test split is made at the level of the physical leaf, and the
+absence of leakage is audited and re-checked on every push.**
 
-## Table of Contents
+| Task | Classes | Test accuracy | Macro-F1 |
+|---|---|---:|---:|
+| Disease identification | 38 (14 crops) | **0.9952** | 0.9938 |
+| Healthy vs diseased | 2 | **0.9986** | 0.9982 |
 
-- [Project Overview](#project-overview)
-- [Scope](#scope)
-- [Dataset — PlantVillage](#dataset--plantvillage)
-- [Planned Classification Tracks](#planned-classification-tracks)
-- [Planned Visualizers](#planned-visualizers)
-- [Planned Tasks](#planned-tasks)
-- [Repository Structure](#repository-structure)
-- [Colab-First Workflow](#colab-first-workflow)
-- [⚠️ Data Leakage Warning — leaf_id Split Integrity](#️-data-leakage-warning--leaf_id-split-integrity)
-- [⚠️ License and Attribution Warning](#️-license-and-attribution-warning)
-- [Planned Deliverables](#planned-deliverables)
-- [Contributing](#contributing)
+Best model per task, EfficientNet-B0 and MobileNetV2, on 7,770 held-out images.
+Full tables: [`artifacts/reports/summary.md`](artifacts/reports/summary.md) ·
+Analysis: [`docs/results.md`](docs/results.md) · Model card: [`MODEL_CARD.md`](MODEL_CARD.md)
 
 ---
 
-## Project Overview
+## Why the split matters more than the architecture
 
-This project develops a plant disease classification system from leaf images using the PlantVillage dataset.
-The model will be able to distinguish healthy leaves from diseased ones (binary track) and identify specific disease categories (multiclass track).
+PlantVillage contains several photographs of every physical leaf — different angles, re-shoots,
+crops of one frame, and in one class a time series over several days. Split those by image and
+almost every test picture has a sibling from the same leaf in training, so the test set mostly
+measures whether the model recognises leaves it has already seen.
 
-The planned modeling approach uses transfer learning with **MobileNetV2** or **EfficientNet B0** implemented in **PyTorch**.
+Measured on the images whose leaf identity the dataset authors published:
 
----
+| Split strategy | Test images whose leaf is also in training |
+|---|---:|
+| Random split by image | 99.8% |
+| Stratified split by image | 99.4% |
+| Split this repository used before the rework | 99.98% |
+| **Leaf-level split used here** | **0%** (audited) |
 
-## Scope
+The published leaf map covers 41,111 of 54,305 colour images. For the remaining 13,194 we cut each
+camera sequence into contiguous segments and drop held-out frames within 20 frame numbers of another
+split; that buffer was chosen by simulating the rule on the images that *do* have leaf ids, where
+the residual leakage can be measured (it is ≈0). The policy, the calibration table and the audit
+are in [`data/splits/README.md`](data/splits/README.md).
 
-**In scope:**
-- Binary classification: healthy vs. unhealthy leaves
-- Multiclass classification: per-disease category prediction
-- Transfer learning fine-tuning with pre-trained CNN backbones
-- Per-class evaluation metrics (precision, recall, F1, confusion matrix)
-- Explainability via Grad-CAM visualizations
-- Failure case documentation
-- Sample prediction galleries
-- Colab-ready notebook workflow
+This is also why these numbers should **not** be compared with the 99%+ figures usually quoted for
+PlantVillage: those are almost always image-level splits.
 
-**Out of scope:**
-- Real-time inference deployment
-- Mobile or edge device optimization
-- Multi-modal or textual disease description generation
-- New dataset collection or annotation
+## The result that matters more than the accuracy
 
----
+The dataset ships a background-removed copy of almost every photo, so the same test images can be
+re-run with the background changed and the leaf untouched:
 
-## Dataset — PlantVillage
+| Test images | 38-class accuracy |
+|---|---:|
+| Original photographs | 0.9952 |
+| Leaf on a flat lab-coloured background | 0.8430 |
+| Leaf on black (dataset's segmented copy) | 0.8028 |
 
-**Why PlantVillage is useful:**
-- Large-scale, publicly available benchmark dataset for plant disease research
-- Covers dozens of plant species and disease categories
-- Supports both binary (healthy/unhealthy) and multiclass (per-disease) framing
-- Widely used in the literature, enabling comparability
+Disease identification loses 13–15 points the moment the background is replaced. A probe trained on
+**background pixels alone** — leaf masked out, 16 colour statistics, logistic regression — predicts
+the class 33.5% of the time against a 2.6% chance rate, because each class was largely photographed
+in one session. Meanwhile Grad-CAM puts about 90% of its mass on the leaf:
 
-**Why PlantVillage is limited:**
-- Images are taken under controlled laboratory conditions with uniform backgrounds
-- Real-world generalization may be significantly weaker than lab-measured accuracy
-- Controlled backgrounds may inflate classification performance compared to field deployment
-- Dataset may not capture disease progression stages or mixed infections
-- Geographic and species diversity may be limited
+![Grad-CAM on the most confident test errors](artifacts/figures/multiclass_efficientnet_b0/gradcam_errors.jpg)
 
-See [DATASET_NOTES.md](DATASET_NOTES.md) for full notes.
+A tidy saliency map is not evidence of robustness. The three experiments are worked through in
+[`docs/results.md`](docs/results.md).
 
----
+## Quick start
 
-## Planned Classification Tracks
+```bash
+git clone https://github.com/atilimai/plant-ai-project && cd plant-ai-project
+python -m venv .venv && .venv/Scripts/activate       # Linux/macOS: source .venv/bin/activate
+pip install -r requirements.txt
 
-### Binary Track — Healthy vs. Unhealthy
-- Input: leaf image
-- Output: `healthy` or `unhealthy`
-- Use case: fast triage screening
+python -m src.data.prepare --config configs/data.yaml   # download (2.2 GB), group, split, audit
+python scripts/run_experiments.py                       # train, evaluate, analyse, export
+```
 
-### Multiclass Track — Disease Category
-- Input: leaf image
-- Output: specific disease class label (e.g., `Tomato_Early_Blight`, `Potato_Late_Blight`, etc.)
-- Use case: precise disease identification
+Classify an image with a trained model:
 
-Both tracks will be developed and evaluated independently.
+```bash
+python -m src.inference.predict --model models/exported/multiclass_efficientnet_b0 leaf.jpg
+# leaf.jpg: Grape – Black rot (88.8%) | then: Potato – Healthy 0.8%, Apple – Cedar apple rust 0.6%
+```
 
----
+Or open the demo, which shows the top-5 predictions and the Grad-CAM overlay side by side:
 
-## Planned Visualizers
+```bash
+python app/app.py
+```
 
-| Visualizer | Purpose |
+Training takes 11–24 minutes per run on an RTX 4060 Laptop GPU and resumes from the last checkpoint,
+which matters on Colab: re-running the same command after a disconnect continues where it stopped.
+
+## Notebooks
+
+Five Colab-ready notebooks in [`notebooks/`](notebooks/), thin on purpose — the logic lives in
+`src/`, so a notebook cannot drift from what the scripts do.
+
+| Notebook | What it shows |
 |---|---|
-| Confusion matrix | Per-class error analysis |
-| Per-class precision / recall / F1 | Performance breakdown |
-| Grad-CAM heatmaps | Model explainability on leaf images |
-| Sample predictions gallery | Correct and incorrect prediction display |
-| Failure case analysis | Systematic review of model errors |
+| `00_dataset_inspection` | Download and checksums, class distribution, leaf grouping, the split and its audit, augmentation check |
+| `01_binary_experiment_plan` | Healthy vs diseased: config, training, learning curves |
+| `02_multiclass_experiment_plan` | 38 classes: config, training, learning curves |
+| `03_evaluation_plan` | Test metrics, confusion matrices, calibration, Grad-CAM, failure analysis |
+| `04_demo_plan` | Inference from an exported model, Grad-CAM, prediction gallery |
 
----
+Long-running cells sit behind a flag, so opening a notebook never starts a training run by accident.
 
-## Planned Tasks
+## Sample predictions
 
-> Tasks are not assigned to any individual. See [PROJECT_PLAN.md](PROJECT_PLAN.md) and [ROADMAP.md](ROADMAP.md).
+Confidence-stratified, not cherry-picked: confident hits, borderline hits, and the most confident
+mistakes, all from the held-out split.
 
-- [ ] Dataset ingestion and split policy implementation (respecting leaf_id)
-- [ ] Leakage guard: enforce leaf_id-based train/val/test splits
-- [ ] Binary classification baseline
-- [ ] Multiclass classification baseline
-- [ ] Augmentation strategy design and implementation
-- [ ] Evaluation metrics pipeline (precision, recall, F1, confusion matrix)
-- [ ] Confusion matrix visualizer
-- [ ] Grad-CAM visualizer
-- [ ] Sample predictions gallery notebook
-- [ ] Failure case analysis report
-- [ ] Colab notebook structure
-- [ ] Model card drafting
-- [ ] License and attribution review
-- [ ] Hugging Face packaging preparation
-- [ ] Final release checklist execution
+![Sample predictions](artifacts/sample_outputs/multiclass_efficientnet_b0/prediction_gallery.jpg)
 
----
-
-## Repository Structure
+## Repository layout
 
 ```
-plant-disease-classification/
-├── .github/
-│   ├── ISSUE_TEMPLATE/        # Issue templates (task, research, bug, docs, release)
-│   └── ISSUES/                # Draft issues for planning
-├── configs/                   # Hyperparameter and experiment config files
-├── data/
-│   ├── raw/                   # Original unmodified dataset files
-│   ├── interim/               # Intermediate transformations
-│   ├── processed/             # Final processed data ready for training
-│   └── splits/                # Train / val / test split manifests
-├── docs/                      # Extended documentation
-├── notebooks/                 # Colab-ready experiment notebooks (placeholders)
-├── src/
-│   ├── data/                  # Dataset loading, transforms, split utilities
-│   ├── models/                # Model architecture definitions
-│   ├── training/              # Training loops and configurations
-│   ├── evaluation/            # Metrics computation and evaluation runners
-│   ├── visualization/         # Confusion matrix, Grad-CAM, galleries
-│   └── inference/             # Prediction and export utilities
-├── tests/                     # Unit and integration tests
-├── artifacts/
-│   ├── figures/               # Saved plots and visualizations
-│   ├── reports/               # Evaluation report outputs
-│   └── sample_outputs/        # Sample prediction outputs
-├── app/                       # Demo app placeholder
-├── models/
-│   ├── checkpoints/           # Saved model checkpoints
-│   └── exported/              # ONNX or TorchScript exports
-└── references/                # Papers, dataset cards, related work
+configs/            data.yaml (source, grouping, split policy) and one YAML per experiment
+src/data/           download, leaf grouping, splitting, audit, dataset, transforms
+src/models/         MobileNetV2 / EfficientNet-B0 wrappers and the Grad-CAM target layer
+src/training/       resumable training loop (AMP, cosine schedule, early stopping)
+src/evaluation/     metrics, evaluation runner, failure analysis, summary tables
+src/visualization/  confusion matrices, Grad-CAM, galleries, calibration plots
+src/inference/      predictor, safetensors/ONNX export, CLI
+scripts/            run_experiments, audit_manifest, background_probe, build_hf_release, check_release
+data/splits/        committed manifest and audit (no images)
+artifacts/          metrics, figures and galleries produced by the pipeline
+app/                Gradio demo, also packaged as a Hugging Face Space
 ```
 
----
+## What is checked automatically
 
-## Colab-First Workflow
+```bash
+ruff check src tests scripts app     # style
+pytest                               # 36 unit tests, no dataset or GPU needed
+python scripts/audit_manifest.py     # leakage audit, from the committed manifest alone
+python scripts/check_release.py      # 50 checks on the release claims
+```
 
-This project is designed to run primarily in **Google Colab** notebooks.
+The first three run in CI on every push. `src.evaluation.evaluate` refuses to report test-set
+metrics unless the committed audit says it passed, and `check_release.py` verifies that the numbers
+quoted in the model card are the ones in `artifacts/`, that no dataset file or weight is committed,
+and that no documentation link is broken.
 
-- All experiment notebooks are located in `notebooks/` and will be developed as Colab-compatible `.ipynb` files
-- Dataset loading assumes Colab Drive mounting or Hugging Face Datasets access
-- No local GPU is assumed; all training plans target Colab T4/A100 runtimes
-- Configs in `configs/` will use simple formats (YAML or JSON) readable without additional tooling
+## Limitations
 
----
+* Every image is a single detached leaf on a uniform background under even lighting. Field
+  performance is **unknown and expected to be much lower**; there is no field data here to check it
+  with, and the background experiments above are a reason to be cautious rather than optimistic.
+* Results come from one split, so per-class F1 for small classes (Potato healthy: 24 test images)
+  carries wide uncertainty. Leaf-grouped cross-validation is in [`ROADMAP.md`](ROADMAP.md).
+* The models answer with one of 38 classes for any input, and confidence is not an
+  out-of-distribution signal. They are also underconfident by design (label smoothing): useful for
+  ranking, not as a probability.
+* One label per image — mixed infections, disease stage and severity are not represented.
+* Research prototype. Not a diagnostic tool and not a substitute for an agronomist.
 
-## ⚠️ Data Leakage Warning — leaf_id Split Integrity
+## History
 
-> **This is a critical research constraint.**
+This repository was taken over half-finished. The inherited split leaked, the reported metrics were
+computed on images the model had trained on, and the committed figures had been generated from
+random noise. What was found, how it was verified and what was removed is written down in
+[`docs/previous_state_audit.md`](docs/previous_state_audit.md); the earlier state remains in git
+history.
 
-The PlantVillage dataset contains multiple images per physical leaf (different angles, lighting, and crops).
-**Splitting by image without respecting `leaf_id` causes data leakage**, where the same physical leaf appears in both training and test sets, leading to artificially inflated performance metrics.
+## Licence and citation
 
-**All train/val/test splits in this project must be made at the `leaf_id` level**, not the image level.
-Split manifests in `data/splits/` must encode this constraint.
+Code is GPL-2.0-only. PlantVillage images are CC BY-SA 3.0, and the dataset authors state that
+algorithms trained on the data fall under the same licence, so the released weights are CC BY-SA 3.0
+as well. Details in [`LICENSING.md`](LICENSING.md); please cite the dataset papers listed in
+[`CITATION.md`](CITATION.md).
 
-See draft issue: `.github/ISSUES/02_leaf_id_leakage_guard.md`
-
----
-
-## ⚠️ License and Attribution Warning
-
-> **Before any public release, the following must be verified:**
-
-- [ ] Confirm the PlantVillage dataset license and terms of use
-- [ ] Confirm attribution requirements for the dataset
-- [ ] Confirm that model weights derived from PlantVillage comply with the license
-- [ ] Confirm Hugging Face release is permitted under the dataset license
-- [ ] Add proper attribution to all published artifacts
-
-See [LICENSE_PLACEHOLDER.md](LICENSE_PLACEHOLDER.md) and [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md).
-
----
-
-## Planned Deliverables
-
-### GitHub
-- Trained model weights (if license permits)
-- Evaluation reports with confusion matrices and per-class metrics
-- Grad-CAM visualizations
-- Sample prediction galleries
-- Failure case analysis notebook
-- Completed model card
-
-### Hugging Face (pending license verification)
-- Model hosted on Hugging Face Hub
-- Dataset card (if redistribution is permitted)
-- Demo Space with Gradio interface (optional)
-
----
-## Hugging Face Release
-
-The Hugging Face model repository for this project is available here:
-
-- https://huggingface.co/atilimai/plantvillage-leaf-disease-classifier
-
-This repository currently hosts the public-facing model card and release documentation for the project.
-Model weights and additional artifacts will be added once final training outputs are available and release checks are completed.
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines and [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for community standards.
+See [`CONTRIBUTING.md`](CONTRIBUTING.md). The short version: splits stay at the leaf level, reported
+numbers come from the pipeline, and no figure enters `artifacts/` unless a real model produced it.

@@ -1,0 +1,434 @@
+path,correct,leaf_area,cam_on_leaf,focus_ratio
+color/Peach___Bacterial_spot/e3ee5cd5-8acb-4a4a-9e47-29f27474fc93___Rutg._Bact.S 2097.JPG,True,0.2351,0.6351,2.7010
+color/Soybean___healthy/4899b1af-5a75-4ce5-925c-2df637cac1f1___RS_HL 3006.JPG,True,0.4701,0.7665,1.6306
+color/Soybean___healthy/40dda71c-7bf8-4b33-80b2-f50339e62116___RS_HL 7470.JPG,True,0.2715,0.6434,2.3695
+color/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/556c242a-d3cc-4bde-bc93-6c8a33e43634___FAM_L.Blight 3783.JPG,True,0.4861,0.8475,1.7433
+color/Soybean___healthy/56943b4a-17b1-405e-844f-2242848026f9___RS_HL 4318.JPG,True,0.4493,0.8282,1.8433
+color/Blueberry___healthy/3b3450a9-d684-4b76-b788-c42c62bacc91___RS_HL 5433.JPG,True,0.4472,0.8848,1.9786
+color/Squash___Powdery_mildew/c2af1964-0961-4c3b-8046-ee5766bc3ac2___UMD_Powd.M 0598.JPG,True,0.7978,0.9417,1.1805
+color/Peach___Bacterial_spot/eed2ea4b-c36e-4968-84b3-0425659d70d6___Rutg._Bact.S 1510.JPG,True,0.4456,0.8093,1.8162
+color/Tomato___Bacterial_spot/84397079-5839-431e-97d1-9dfc144f1fff___UF.GRC_BS_Lab Leaf 0486.JPG,True,0.4389,0.8455,1.9265
+color/Tomato___Bacterial_spot/ebaf3d67-cb6b-4b01-be28-f2276db98177___GCREC_Bact.Sp 3649.JPG,True,0.5130,0.8345,1.6266
+color/Potato___Early_blight/0c4f6f72-c7a2-42e1-9671-41ab3bf37fe7___RS_Early.B 6752.JPG,True,0.5766,0.9257,1.6055
+color/Orange___Haunglongbing_(Citrus_greening)/e3efbcf5-afa3-4201-b422-d27013b7c7be___UF.Citrus_HLB_Lab 0037.JPG,True,0.5654,0.8635,1.5273
+color/Strawberry___healthy/dc05a60e-5939-4e59-bfee-890db52986cc___RS_HL 2014.JPG,True,0.4963,0.8927,1.7989
+color/Tomato___Bacterial_spot/b5f208b2-bfa5-4542-bbd3-265519820575___GCREC_Bact.Sp 6127.JPG,True,0.4846,0.8774,1.8103
+color/Tomato___Bacterial_spot/6959b518-7a96-46f1-a232-95f7d82767fa___GCREC_Bact.Sp 3642.JPG,True,0.3807,0.7076,1.8587
+color/Orange___Haunglongbing_(Citrus_greening)/d4670e46-b3de-4f59-b7da-28c085eed39e___UF.Citrus_HLB_Lab 9795.JPG,True,0.5505,0.9011,1.6369
+color/Tomato___Septoria_leaf_spot/459141fb-4e81-4e44-a66a-0d4a629fa755___Matt.S_CG 2516.JPG,True,0.4122,0.7820,1.8972
+color/Soybean___healthy/dd5e51d1-44a9-4df6-b2a5-42fdcde44d9e___RS_HL 5549.JPG,True,0.5414,0.8175,1.5101
+color/Soybean___healthy/c2b0b87e-e58b-490d-b3d0-94611b61f1d9___RS_HL 4988.JPG,True,0.3941,0.6768,1.7173
+"color/Pepper,_bell___healthy/615f1ae8-e24a-467c-93eb-c4dd352e3f50___JR_HL 7767.JPG",True,0.5901,0.8925,1.5125
+color/Corn_(maize)___healthy/ad678aed-6e1c-40fd-8fef-41a44389f8fd___R.S_HL 0638 copy.jpg,True,0.9998,0.9999,1.0002
+color/Orange___Haunglongbing_(Citrus_greening)/8126e6e3-4031-44fa-811c-6928dda2ee73___CREC_HLB 7602.JPG,True,0.3468,0.7406,2.1354
+color/Orange___Haunglongbing_(Citrus_greening)/e3d4dcd0-af7f-4fcd-a3b6-97c30184261a___UF.Citrus_HLB_Lab 1639.JPG,True,0.5657,0.8832,1.5611
+color/Soybean___healthy/c6c6effe-4040-43d5-914d-40258e891d4c___RS_HL 7471.JPG,True,0.3538,0.6982,1.9734
+color/Blueberry___healthy/8b875aa8-94b9-44d1-9302-8b183d6441b4___RS_HL 5118.JPG,True,0.4618,0.9009,1.9510
+color/Tomato___Septoria_leaf_spot/41efe5a6-94ca-4761-8543-fd42b09dc4a8___Matt.S_CG 6303.JPG,True,0.4890,0.8357,1.7089
+color/Apple___healthy/d345baff-7be6-45a6-802a-b945b95b5885___RS_HL 5956.JPG,True,0.4427,0.8974,2.0273
+color/Soybean___healthy/74bffb5c-8136-43e6-b6a2-77ba128414d6___RS_HL 3342.JPG,True,0.4898,0.7870,1.6068
+"color/Pepper,_bell___Bacterial_spot/b6f44b41-cb67-47be-9cf5-958c517ff465___JR_B.Spot 9100.JPG",True,0.4781,0.8983,1.8788
+color/Apple___Cedar_apple_rust/79e57aaf-f825-4818-9594-621327134e0b___FREC_C.Rust 4219.JPG,True,0.5360,0.9353,1.7450
+color/Cherry_(including_sour)___healthy/34e05c4f-6742-442e-884e-ef3191eb923b___JR_HL 4049.JPG,True,0.5096,0.9031,1.7721
+color/Grape___Esca_(Black_Measles)/7c033f47-c8dd-4865-ae23-eaaee56f002e___FAM_B.Msls 1798.JPG,True,0.5130,0.8508,1.6586
+color/Soybean___healthy/a18bfa38-a98e-4eae-9696-4f357f2bd750___RS_HL 4425.JPG,True,0.3445,0.7087,2.0573
+color/Squash___Powdery_mildew/a9d2080e-9f81-47f9-95d4-e1fdda575937___UMD_Powd.M 0601.JPG,True,0.7120,0.9342,1.3121
+color/Grape___Esca_(Black_Measles)/9eb1bd62-945a-489d-a965-0fad6a0b35d0___FAM_B.Msls 4494.JPG,True,0.4696,0.7899,1.6821
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/83bb32e9-e353-413c-962d-0f20eba56dff___YLCV_NREC 2443.JPG,True,0.3729,0.7811,2.0948
+color/Orange___Haunglongbing_(Citrus_greening)/b2091397-c5b2-4a44-9713-dd4c34c1219c___CREC_HLB 4267.JPG,True,0.5521,0.8580,1.5541
+color/Soybean___healthy/98e28b3a-aa6d-4345-b53f-370cf85baebb___RS_HL 7401.JPG,True,0.3918,0.7503,1.9148
+color/Tomato___Late_blight/5f866129-ebbd-413b-aa6e-cf149be553e7___RS_Late.B 5390.JPG,True,0.3721,0.5069,1.3623
+color/Soybean___healthy/d55912f7-4d3f-4354-a23c-d5fe033de024___RS_HL 4313.JPG,True,0.4640,0.7743,1.6685
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/51bd05fe-a50b-4bc1-aa3d-096a5621531d___UF.GRC_YLCV_Lab 01719.JPG,True,0.4956,0.8126,1.6397
+color/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/57dd87f8-d86b-44d5-9fe4-fa809e983834___FAM_L.Blight 1684.JPG,True,0.5636,0.8426,1.4951
+color/Corn_(maize)___healthy/ae6d6958-016c-4a24-8963-558bcf7db294___R.S_HL 5509 copy 2.jpg,True,1.0000,1.0000,1.0000
+color/Orange___Haunglongbing_(Citrus_greening)/d918dc99-f5d2-434e-9b0d-eca3c86801d2___UF.Citrus_HLB_Lab 1130.JPG,True,0.5145,0.8486,1.6493
+color/Tomato___Spider_mites Two-spotted_spider_mite/a317385b-4f00-489e-94d3-8fbeac153086___Com.G_SpM_FL 8698.JPG,True,0.3908,0.8955,2.2916
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/1af87bdf-0bd0-4146-93e5-cc5f97d98b05___UF.GRC_YLCV_Lab 01968.JPG,True,0.3583,0.7505,2.0943
+color/Blueberry___healthy/ee7d3511-1912-46d9-8cda-254b77612a58___RS_HL 0458.JPG,True,0.3194,0.8140,2.5487
+color/Orange___Haunglongbing_(Citrus_greening)/a6f5d46c-42da-4ce5-8bb8-a83b72a86994___CREC_HLB 4795.JPG,True,0.4330,0.7827,1.8077
+color/Orange___Haunglongbing_(Citrus_greening)/87edc975-3de7-456a-9c3a-3dfffe7f25f9___UF.Citrus_HLB_Lab 0181.JPG,True,0.6052,0.8966,1.4815
+color/Orange___Haunglongbing_(Citrus_greening)/029ac435-a5e8-423b-b75e-0a56d8960e6c___CREC_HLB 4269.JPG,True,0.5465,0.8837,1.6172
+color/Apple___Apple_scab/d01086a5-c14e-424a-8825-47343752c0a0___FREC_Scab 3170.JPG,True,0.4895,0.8012,1.6368
+color/Tomato___Septoria_leaf_spot/0d8187e2-00e2-40e7-b1a5-c94db561057c___JR_Sept.L.S 8439.JPG,True,0.2020,0.5953,2.9472
+color/Blueberry___healthy/b5b976f0-c08f-49c9-9993-c50c4dfbffc9___RS_HL 5040.JPG,True,0.3755,0.9000,2.3966
+color/Apple___healthy/da3ef282-bae6-465c-9ffb-a393c4c38f1d___RS_HL 7528.JPG,True,0.4457,0.8988,2.0166
+color/Orange___Haunglongbing_(Citrus_greening)/7d78ee32-6468-4926-a88b-0bdb21b83beb___CREC_HLB 7790.JPG,True,0.3868,0.7574,1.9581
+color/Peach___Bacterial_spot/a5f2555f-407e-4545-9030-cbaa96aae216___Rutg._Bact.S 1185.JPG,True,0.3508,0.7115,2.0281
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/6740fff8-ba48-449a-a82b-cef9407a9096___YLCV_GCREC 2281.JPG,True,0.3001,0.7706,2.5679
+color/Tomato___healthy/2b1cbc53-a62b-4daf-b233-8fc1d8d8c099___RS_HL 0296.JPG,True,0.4942,0.8387,1.6970
+color/Strawberry___Leaf_scorch/13971547-97a9-4bc8-b843-93aa3247351d___RS_L.Scorch 0932.JPG,True,0.5230,0.8384,1.6030
+color/Soybean___healthy/d0816456-9583-4738-904b-fc696ea0a4ca___RS_HL 3928.JPG,True,0.4347,0.7595,1.7473
+color/Tomato___Late_blight/ed974f5b-e999-46a9-9e22-da51da2766b6___GHLB_PS Leaf 8 Day 16.jpg,True,0.0853,0.3194,3.7431
+color/Apple___healthy/eff8a4a7-8aa4-4549-ae15-035f85c15486___RS_HL 7783.JPG,True,0.4273,0.8060,1.8864
+color/Tomato___healthy/c910ce6d-8dd7-4c9f-9530-dd26684058d3___RS_HL 9697.JPG,True,0.4601,0.8021,1.7431
+color/Blueberry___healthy/542cbfd7-3231-4aa9-822e-7d2475b0ea8d___RS_HL 5042.JPG,True,0.3970,0.8681,2.1865
+color/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/ec76caa7-e1a4-440e-9b4c-3ee355aac33b___RS_GLSp 4479.JPG,True,0.6656,0.9474,1.4233
+color/Apple___Apple_scab/97294a06-04ae-440f-b130-ddff2817c727___FREC_Scab 3372.JPG,True,0.7239,0.9126,1.2607
+color/Soybean___healthy/d020a15e-d0eb-42d2-a99d-309ad669461c___RS_HL 6907.JPG,True,0.6168,0.8153,1.3217
+color/Grape___Black_rot/6a140925-ad57-4690-abc4-0aad99a706e8___FAM_B.Rot 0554.JPG,True,0.5269,0.8319,1.5789
+color/Cherry_(including_sour)___healthy/1f37c6f5-f412-4367-b88c-af380713ca97___JR_HL 9714.JPG,True,0.3462,0.7900,2.2818
+color/Soybean___healthy/3bd88ef7-2bbd-4468-83f5-79296a102104___RS_HL 4220.JPG,True,0.5229,0.8257,1.5791
+color/Potato___Early_blight/419611a4-5597-43d6-ae92-c3c09bc549d7___RS_Early.B 7182.JPG,True,0.5115,0.9193,1.7973
+color/Corn_(maize)___Northern_Leaf_Blight/7d55a6f5-5101-4103-b34c-5e3d764d2757___RS_NLB 3592.JPG,True,0.8976,0.9612,1.0708
+color/Strawberry___healthy/43c3ba78-39d0-49e8-92f1-34b747f9d1ef___RS_HL 4411.JPG,True,0.5872,0.9201,1.5668
+color/Tomato___healthy/b5ff3a01-04bd-47d0-99c5-cb90ec1f9916___RS_HL 9804.JPG,True,0.3948,0.8326,2.1089
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/a0f6d0ce-5de9-4bb5-a936-e6c4009f05ae___YLCV_NREC 2450.JPG,True,0.3425,0.7619,2.2243
+color/Peach___Bacterial_spot/c3f4d3c8-cc82-49f7-9fa7-682d381b6a11___Rut._Bact.S 3478.JPG,True,0.5125,0.8427,1.6442
+color/Tomato___Leaf_Mold/edf50862-c5ce-406d-a3f1-f228bd358ca3___Crnl_L.Mold 7038.JPG,True,0.3389,0.8742,2.5799
+color/Corn_(maize)___healthy/41273258-e17c-44e1-a12d-bf8582235994___R.S_HL 0650 copy 3.jpg,True,1.0000,1.0000,1.0000
+color/Blueberry___healthy/27fbac87-0e7b-4a51-8a52-e8d58b996462___RS_HL 4954.JPG,True,0.5006,0.8890,1.7757
+color/Potato___Early_blight/983cf28c-872f-423a-a774-41ed2939f249___RS_Early.B 7660.JPG,True,0.5389,0.9089,1.6864
+color/Soybean___healthy/76c49863-23eb-4489-b150-dbd23d804469___RS_HL 4329.JPG,True,0.4577,0.7919,1.7301
+color/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/0cbd0007-b9dc-4b8a-b70f-23a5d1cff30d___FAM_L.Blight 4575.JPG,True,0.6139,0.8458,1.3777
+color/Squash___Powdery_mildew/a9cac815-7adb-4555-ac20-a3878d613622___MD_Powd.M 0009.JPG,True,0.6985,0.8983,1.2860
+color/Grape___Black_rot/8373b60d-2179-455f-9f0e-eed18508fc4c___FAM_B.Rot 3575.JPG,True,0.4927,0.8687,1.7632
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/ad80c057-1d90-44a4-b330-327657b1075a___YLCV_NREC 2126.JPG,True,0.3817,0.8189,2.1453
+color/Blueberry___healthy/421aef81-845c-4049-b100-a88670b8fadb___RS_HL 4985.JPG,True,0.5230,0.9024,1.7255
+"color/Pepper,_bell___Bacterial_spot/a15291c3-e639-42d5-b22d-ed147c6453be___JR_B.Spot 3134.JPG",True,0.5249,0.8876,1.6910
+color/Grape___Black_rot/b05b2685-6ef2-48b3-b52c-8c006866b30d___FAM_B.Rot 0480.JPG,True,0.5057,0.7753,1.5331
+color/Grape___Black_rot/c359d785-abef-4a94-9d2b-ec0e153364ea___FAM_B.Rot 0350.JPG,True,0.4300,0.8165,1.8989
+color/Orange___Haunglongbing_(Citrus_greening)/59676bab-2612-4e58-9320-5564b1014c84___CREC_HLB 3930.JPG,True,0.4786,0.8376,1.7500
+color/Cherry_(including_sour)___Powdery_mildew/693c845b-b606-4bf9-8f29-7f8ae2c7f09d___FREC_Pwd.M 5096.JPG,True,0.4745,0.9006,1.8977
+color/Potato___Early_blight/1d18a770-8a16-4765-bae9-5d96f781db89___RS_Early.B 7803.JPG,True,0.6215,0.9342,1.5033
+color/Orange___Haunglongbing_(Citrus_greening)/c9cd1eca-9720-4610-a785-2cdb7357062e___UF.Citrus_HLB_Lab 0744.JPG,True,0.5597,0.8641,1.5439
+color/Tomato___Bacterial_spot/24cd9e39-f7d2-4dd3-9681-b3a8e35cd3db___GCREC_Bact.Sp 3048.JPG,True,0.4889,0.7948,1.6257
+color/Tomato___Bacterial_spot/834e7256-4e64-41bf-93e6-60edba4a1e8a___UF.GRC_BS_Lab Leaf 0286.JPG,True,0.2952,0.7653,2.5921
+color/Tomato___Spider_mites Two-spotted_spider_mite/3181e984-bdb0-403d-9f58-a259535cb4d4___Com.G_SpM_FL 1405.JPG,True,0.3001,0.8359,2.7857
+color/Cherry_(including_sour)___Powdery_mildew/753c3273-e5a5-4425-ab2b-45f41c21ce12___FREC_Pwd.M 4519.JPG,True,0.3728,0.8413,2.2565
+color/Tomato___Early_blight/06339fe1-154f-4bcb-be91-a29e86e25929___RS_Erly.B 7440.JPG,True,0.2735,0.6783,2.4803
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/a1e1c763-0b15-46be-a205-8530232f0384___YLCV_NREC 2874.JPG,True,0.3270,0.7698,2.3542
+color/Apple___Black_rot/760ef647-ba10-4477-a388-105182a0c0e2___JR_FrgE.S 2895.JPG,True,0.4023,0.7547,1.8760
+color/Orange___Haunglongbing_(Citrus_greening)/f11c873b-cc4e-45f8-bfae-fa5d612f41db___CREC_HLB 7923.JPG,True,0.4105,0.7122,1.7350
+color/Grape___Black_rot/c130b096-87fc-45c9-823d-ea18438c04f8___FAM_B.Rot 0447.JPG,True,0.4778,0.8161,1.7082
+color/Corn_(maize)___Northern_Leaf_Blight/cc3c5678-ed5a-43f6-bf74-5c13e9ee71ee___RS_NLB 3651.JPG,True,0.9310,0.9720,1.0440
+color/Tomato___Tomato_mosaic_virus/8b75624a-5775-4d44-a2e0-62243632b4a9___PSU_CG 2279.JPG,True,0.3054,0.7791,2.5512
+color/Peach___Bacterial_spot/f8372db2-cbab-4f19-956a-e7b1041f9efe___Rut._Bact.S 1511.JPG,True,0.5345,0.8363,1.5645
+color/Peach___Bacterial_spot/c6a13081-82d3-490c-b0b5-2538b723aa83___Rut._Bact.S 1513.JPG,True,0.2503,0.6177,2.4680
+color/Tomato___Late_blight/d491156d-bcb8-47b9-b6b9-3f1d2dc1777f___GHLB2 Leaf 8779.JPG,True,0.1902,0.7289,3.8335
+color/Potato___Late_blight/9fa413c2-d724-4bc6-8aed-954a472cf228___RS_LB 4754.JPG,True,0.4859,0.7131,1.4676
+color/Blueberry___healthy/c5f5eed7-9a23-4f26-b1cc-fd73574600d7___RS_HL 0443.JPG,True,0.3381,0.8212,2.4286
+color/Tomato___Late_blight/15e1e8d7-e05a-4dc1-b872-364b15f004f0___RS_Late.B 4873.JPG,True,0.4449,0.6951,1.5623
+color/Tomato___Spider_mites Two-spotted_spider_mite/7a08db2d-d61c-447b-b45d-b118351e88f5___Com.G_SpM_FL 9456.JPG,True,0.3702,0.8916,2.4084
+color/Orange___Haunglongbing_(Citrus_greening)/453b12b7-1c10-4b2c-b899-46ba8c9a55e2___CREC_HLB 3929.JPG,True,0.4852,0.8466,1.7448
+color/Orange___Haunglongbing_(Citrus_greening)/01245345-5513-45d5-9990-2c5012a378f6___CREC_HLB 5672.JPG,True,0.4298,0.8047,1.8720
+color/Soybean___healthy/4d6dbf6a-b389-40ae-a3c1-e650048b2606___RS_HL 7246.JPG,True,0.4039,0.7168,1.7745
+color/Soybean___healthy/f6579a78-e6eb-4a65-82f7-7be30f100a07___RS_HL 5755 1.JPG,True,0.6532,0.8478,1.2979
+color/Soybean___healthy/fc85ad1c-42ac-4a49-9fe1-260ab41a0e6f___RS_HL 5800.JPG,True,0.6754,0.8728,1.2924
+color/Tomato___healthy/058ade43-2361-4039-bbe5-0ac661828c01___GH_HL Leaf 325.1.JPG,True,0.3464,0.8446,2.4383
+color/Cherry_(including_sour)___Powdery_mildew/fd7fbe5c-d234-4c16-b587-faed3407e2dd___FREC_Pwd.M 0474.JPG,True,0.3379,0.7497,2.2187
+color/Tomato___Septoria_leaf_spot/ba371c18-0d08-4c18-a8d8-e7c716fa9cfa___Matt.S_CG 6518.JPG,True,0.4851,0.6703,1.3816
+color/Tomato___Bacterial_spot/a69cf9dd-83c8-4b5c-8cd2-dbcba3aa1eb7___UF.GRC_BS_Lab Leaf 8884.JPG,True,0.4763,0.8346,1.7523
+color/Tomato___Late_blight/0cdd34fe-e8f2-41a7-b634-475338233f87___GHLB2 Leaf 8801.JPG,True,0.1250,0.4822,3.8562
+color/Grape___Black_rot/76792775-239d-479b-8ff7-828b5ce8bb36___FAM_B.Rot 0339.JPG,True,0.4212,0.8346,1.9817
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/baf4a403-4e33-47ce-9f48-54eabaf47825___YLCV_NREC 2182.JPG,True,0.3344,0.7359,2.2005
+color/Peach___Bacterial_spot/43cece24-1c67-4e50-930e-1636608b465a___Rut._Bact.S 1557.JPG,True,0.4818,0.7886,1.6368
+color/Potato___Late_blight/841a4e5a-7aa6-4b32-a2b2-436874a48fdb___RS_LB 4469.JPG,True,0.4605,0.8280,1.7981
+color/Orange___Haunglongbing_(Citrus_greening)/c502c677-9e4e-4e2a-ba1c-b4be599e022c___CREC_HLB 3958.JPG,True,0.5595,0.8741,1.5621
+color/Grape___Esca_(Black_Measles)/a0bf543a-219b-42be-9b8f-ef93eb7b21c4___FAM_B.Msls 0997.JPG,True,0.4497,0.7920,1.7612
+color/Soybean___healthy/b58b7d91-8ef1-4520-83f7-2de999660512___RS_HL 4455.JPG,True,0.5271,0.8227,1.5609
+color/Cherry_(including_sour)___Powdery_mildew/236cbbdd-72dd-4bf6-84ac-a26f5599804f___FREC_Pwd.M 4521.JPG,True,0.3006,0.8198,2.7273
+color/Apple___healthy/44714cae-d7c8-4b0a-9058-0fe9ba703064___RS_HL 8081.JPG,True,0.5484,0.9206,1.6788
+color/Orange___Haunglongbing_(Citrus_greening)/00f9de69-746a-4198-8047-73e21899a058___UF.Citrus_HLB_Lab 1747.JPG,True,0.5806,0.8934,1.5388
+color/Potato___Early_blight/e0042931-92f3-4527-b292-872075f4261d___RS_Early.B 7203.JPG,True,0.5657,0.9275,1.6394
+color/Blueberry___healthy/34da4c86-6d33-4f03-bcd3-d89186095ede___RS_HL 5117.JPG,True,0.2474,0.7345,2.9689
+color/Orange___Haunglongbing_(Citrus_greening)/7875aa2a-1ef1-41b5-b83a-032f71ed276b___CREC_HLB 6403.JPG,True,0.5159,0.8382,1.6247
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/95b27a95-6bc1-44ff-b40b-dab246ff48ac___UF.GRC_YLCV_Lab 01638.JPG,True,0.3948,0.7600,1.9251
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/5ab6543c-e9ec-4b47-b8c5-ab41e27dffb1___YLCV_NREC 2139.JPG,True,0.4033,0.7452,1.8477
+color/Soybean___healthy/1f92c336-18b4-491f-8783-0fdda544518b___RS_HL 6408.JPG,True,0.6398,0.8568,1.3392
+color/Soybean___healthy/2f7a95bf-abd1-4589-bff9-84fa23297705___RS_HL 4730.JPG,True,0.5542,0.8175,1.4750
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/180ef991-3ed2-41d8-93b6-c1791d745669___UF.GRC_YLCV_Lab 01678.JPG,True,0.4169,0.7380,1.7702
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/fcdfc17c-1a1b-48df-8612-740f3a50fcbd___UF.GRC_YLCV_Lab 01892.JPG,True,0.5367,0.8636,1.6090
+color/Tomato___Bacterial_spot/43d79893-c9e3-49b1-9dd7-52677d9bd325___GCREC_Bact.Sp 3196.JPG,True,0.3825,0.8262,2.1598
+color/Soybean___healthy/d6fad49a-052a-4c19-8593-04e5de873947___RS_HL 5739.JPG,True,0.6238,0.8662,1.3887
+color/Potato___Early_blight/9c77f930-5d28-4b1f-8274-30c2c2dc82fb___RS_Early.B 8347.JPG,True,0.6843,0.9426,1.3775
+color/Corn_(maize)___Northern_Leaf_Blight/143ff440-2efd-4bc9-8312-265363c0872f___RS_NLB 3625.JPG,True,0.8197,0.9324,1.1375
+color/Orange___Haunglongbing_(Citrus_greening)/82024300-aa2e-4322-b559-c9ca8b211a75___CREC_HLB 7853.JPG,True,0.4202,0.7425,1.7671
+color/Soybean___healthy/fdc60c1f-4e13-40c3-9627-400e690d6a9d___RS_HL 3143.JPG,True,0.5311,0.7774,1.4639
+color/Tomato___Late_blight/3ef1e6d9-0ea8-4b1d-a2f4-a99bbc4ba66e___GHLB2 Leaf 8830.JPG,True,0.1724,0.6074,3.5231
+color/Tomato___Late_blight/700fdedf-00ca-4fbc-9871-ad67425777db___GHLB2 Leaf 8777.JPG,True,0.1201,0.4470,3.7216
+color/Apple___healthy/044a96a2-d5ac-490b-8c57-2c1859cdf8f3___RS_HL 7991.JPG,True,0.4017,0.8924,2.2218
+color/Tomato___Bacterial_spot/d9abd611-5a0a-4d54-8c73-8df2c7f909d2___GCREC_Bact.Sp 5815.JPG,True,0.5359,0.8589,1.6026
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/31ec72a0-8540-4a63-99f0-a95c444ee83c___YLCV_NREC 2016.JPG,True,0.3411,0.7818,2.2916
+color/Tomato___Spider_mites Two-spotted_spider_mite/dc961b68-8eb5-4444-ac18-2ec9dc8f0501___Com.G_SpM_FL 8720.JPG,True,0.2795,0.8288,2.9657
+color/Tomato___healthy/0d789240-9714-4378-8b63-4afb12ddfa44___RS_HL 9735.JPG,True,0.4114,0.8762,2.1298
+color/Apple___Apple_scab/89937e2f-6ec2-483d-9ba4-1c7c61859cb0___FREC_Scab 3394.JPG,True,0.4133,0.8543,2.0669
+color/Apple___healthy/e35729f0-09b8-4cd4-a04c-30c9b49095c5___RS_HL 6068.JPG,True,0.3763,0.8505,2.2601
+color/Tomato___Late_blight/cb56bd8e-f217-4537-9d35-a62d6b82f48f___GHLB2 Leaf 8769.JPG,True,0.1467,0.5417,3.6937
+color/Soybean___healthy/fdfd0f27-6e34-4672-9781-45a442d3df33___RS_HL 7408.JPG,True,0.4124,0.7483,1.8147
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/70405b14-c0d9-4060-bc08-cd424e4f28fb___UF.GRC_YLCV_Lab 01780.JPG,True,0.4702,0.7898,1.6797
+color/Squash___Powdery_mildew/dd999f42-fe18-4de2-8be8-66770f1b20bb___MD_Powd.M 0007.JPG,True,0.5291,0.8208,1.5513
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/297a2a8a-d9fe-4c30-8904-55a1086763d0___YLCV_GCREC 5405.JPG,True,0.3497,0.8062,2.3055
+color/Tomato___Spider_mites Two-spotted_spider_mite/f7b7b4c8-1420-4ffe-ba64-97be026edeb4___Com.G_SpM_FL 8978.JPG,True,0.2519,0.7933,3.1491
+color/Soybean___healthy/5913c19a-1c53-4db8-a4bc-47bb13053965___RS_HL 4733.JPG,True,0.4763,0.7684,1.6132
+color/Raspberry___healthy/e8024774-229e-4fb7-a239-f8052db42a9f___Mary_HL 6407.JPG,True,0.5469,0.8612,1.5747
+color/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/950e2b3f-a007-48c5-bb85-8c68336a7e76___RS_GLSp 4453.JPG,True,0.5412,0.8961,1.6556
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/124d64c3-37d2-4192-b7ec-998a811b4e1e___UF.GRC_YLCV_Lab 01626.JPG,True,0.3614,0.7912,2.1894
+color/Tomato___Spider_mites Two-spotted_spider_mite/61425a6d-4f24-4306-b085-f91143e04be9___Com.G_SpM_FL 1385.JPG,True,0.3590,0.8975,2.5003
+color/Potato___Late_blight/c01daf14-9595-4b10-974d-3452fe133060___RS_LB 4463.JPG,True,0.5106,0.8046,1.5760
+color/Orange___Haunglongbing_(Citrus_greening)/9d78dd12-8bf3-4d9e-a2fc-bbe3fab8b153___CREC_HLB 4695.JPG,True,0.4027,0.7840,1.9470
+color/Peach___Bacterial_spot/de322257-32f2-4bf3-ae15-c274c1570134___Rut._Bact.S 3479.JPG,True,0.4677,0.8483,1.8137
+color/Tomato___healthy/f96987aa-d19d-415b-a68c-73a07a47d521___RS_HL 9736.JPG,True,0.4258,0.7880,1.8506
+color/Orange___Haunglongbing_(Citrus_greening)/0a1da8a1-566a-4a34-b2bb-ae1c974bfc60___CREC_HLB 7134.JPG,True,0.4656,0.8274,1.7769
+color/Blueberry___healthy/ffa088ac-5713-418d-be12-7fdb2efdd7b3___RS_HL 2351.JPG,True,0.3498,0.8642,2.4705
+color/Corn_(maize)___healthy/c80028fb-0d2b-4090-b858-a22720145dc2___R.S_HL 0627 copy 3.jpg,True,0.9990,1.0000,1.0009
+color/Grape___Black_rot/b1dab25f-063e-4ce2-bbda-fdd6d662dce9___FAM_B.Rot 3164.JPG,True,0.4904,0.8273,1.6871
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/b2a0ebdc-5cdc-4de1-a4a0-eebdac5f6345___UF.GRC_YLCV_Lab 01865.JPG,True,0.5300,0.8314,1.5688
+"color/Pepper,_bell___Bacterial_spot/c2914371-c45f-4b19-bbf2-22832118ca9b___NREC_B.Spot 9112.JPG",True,0.4063,0.7678,1.8898
+color/Soybean___healthy/ce0dfc02-a1d9-49e4-be52-765b82434c38___RS_HL 4427.JPG,True,0.2832,0.6221,2.1971
+color/Orange___Haunglongbing_(Citrus_greening)/4ab3a90e-b761-4cc8-a44d-f81953768d35___UF.Citrus_HLB_Lab 0039.JPG,True,0.5980,0.8777,1.4679
+color/Orange___Haunglongbing_(Citrus_greening)/11e8c26a-dea3-493e-b777-936da1d901dd___CREC_HLB 5708.JPG,True,0.4961,0.8134,1.6396
+color/Soybean___healthy/d663a56a-ce0b-4466-88c8-9d0fe620abea___RS_HL 5696 1.JPG,True,0.5888,0.7657,1.3004
+color/Potato___Late_blight/e95f2954-1b68-490d-9684-90b3080676b1___RS_LB 3997.JPG,True,0.4745,0.7706,1.6241
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/4616690f-d6df-4dbe-9c10-7b987a046304___YLCV_GCREC 5362.JPG,True,0.2507,0.6122,2.4417
+color/Orange___Haunglongbing_(Citrus_greening)/de1d6c8f-d51d-4b49-a631-405497babf84___CREC_HLB 7225.JPG,True,0.4331,0.7739,1.7870
+color/Blueberry___healthy/c0c3498a-4b3c-49b0-b44f-2b3f0d7a6ebb___RS_HL 2372.JPG,True,0.2712,0.7934,2.9253
+color/Tomato___Early_blight/a8b2bbbc-5bef-4ef4-8322-48cde639a9aa___RS_Erly.B 7438.JPG,True,0.2998,0.6815,2.2732
+"color/Pepper,_bell___healthy/d6e06adc-15b1-4513-97b7-7e7b3920824f___JR_HL 8258.JPG",True,0.4591,0.8553,1.8628
+color/Strawberry___Leaf_scorch/ca33c3f3-52d8-4401-8a6a-962a9b13f11d___RS_L.Scorch 9912.JPG,True,0.5753,0.8695,1.5114
+color/Orange___Haunglongbing_(Citrus_greening)/be04ecbe-1426-4d1b-91dd-f2ce71c0357f___CREC_HLB 4796.JPG,True,0.4448,0.7665,1.7234
+color/Tomato___Septoria_leaf_spot/a201604c-5abc-414a-89cb-b74c80289fa6___Keller.St_CG 1949.JPG,True,0.3504,0.7643,2.1810
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/504c0aab-3d35-4d87-8c49-597d299da85e___YLCV_NREC 2442.JPG,True,0.3264,0.7767,2.3793
+color/Peach___Bacterial_spot/0c148c6a-d3ea-44af-b52a-4ee596dce857___Rutg._Bact.S 1205.JPG,True,0.3196,0.7009,2.1932
+color/Tomato___Target_Spot/e2c3ecfd-9637-4158-9400-315f5949b7f4___Com.G_TgS_FL 7962.JPG,True,0.4506,0.8561,1.9000
+color/Corn_(maize)___Northern_Leaf_Blight/31a6d935-89b5-4feb-8fc6-44300ab3639e___RS_NLB 3640.JPG,True,0.6706,0.9508,1.4178
+color/Tomato___Early_blight/d71f9e9f-e7e3-44e3-8376-0820971fe2c1___RS_Erly.B 9384.JPG,True,0.4323,0.8045,1.8609
+color/Soybean___healthy/19fb1d80-90e4-43b9-827a-6031cdf812ba___RS_HL 6184.JPG,True,0.6271,0.8565,1.3659
+color/Tomato___Early_blight/9eaef8d7-dd22-449e-b837-d01a7eb4afe6___RS_Erly.B 7686.JPG,True,0.3407,0.5737,1.6837
+color/Grape___Esca_(Black_Measles)/13d50b9c-69f2-40cd-bb93-22d36593191e___FAM_B.Msls 3906.JPG,True,0.4590,0.8670,1.8888
+color/Orange___Haunglongbing_(Citrus_greening)/a35e69af-9cf8-42c2-a8c7-6d13d98cb0af___CREC_HLB 6683.JPG,True,0.4540,0.7911,1.7424
+color/Peach___Bacterial_spot/cc143124-228b-4e66-9019-2a5b539e4c76___Rut._Bact.S 0892.JPG,True,0.4176,0.8460,2.0259
+color/Peach___Bacterial_spot/85523221-bd45-4c1a-89b3-a319c8961132___Rutg._Bact.S 1622.JPG,True,0.4886,0.8381,1.7152
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/bad25b3b-e8d1-4e33-9034-7c9248acc4a9___YLCV_GCREC 2684.JPG,True,0.4216,0.8062,1.9121
+color/Soybean___healthy/293461dc-a859-4f59-b7e1-4ce859fc1ce3___RS_HL 5640 1.JPG,True,0.5702,0.8232,1.4436
+color/Orange___Haunglongbing_(Citrus_greening)/dc72fb3e-146d-4818-bec6-d61c4ffaee3f___CREC_HLB 7704.JPG,True,0.3013,0.6832,2.2678
+"color/Pepper,_bell___healthy/48cc23f2-d264-40f7-9267-7fc97a19aba2___JR_HL 8484.JPG",True,0.4828,0.8639,1.7894
+color/Potato___Early_blight/2c310eaf-dbf4-4e8f-a8d8-ed8e0b51067a___RS_Early.B 6897.JPG,True,0.5880,0.9302,1.5819
+color/Tomato___Spider_mites Two-spotted_spider_mite/312bee2d-2595-4d86-992f-cca44dbaad4a___Com.G_SpM_FL 9492.JPG,True,0.3393,0.8739,2.5752
+color/Tomato___Leaf_Mold/e59a2933-7869-4e49-8ed5-1663ca5200d1___Crnl_L.Mold 6785.JPG,True,0.2572,0.7712,2.9986
+"color/Pepper,_bell___healthy/35bac1bd-0af2-45ad-a1c0-4b19dc070240___JR_HL 7950.JPG",True,0.4911,0.8165,1.6628
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/9a9619ca-d585-4336-9437-465f3d09c614___UF.GRC_YLCV_Lab 01676.JPG,True,0.3837,0.8181,2.1323
+color/Apple___Black_rot/ce1df5bf-b9cd-491a-9b54-f4e20f3b71a2___JR_FrgE.S 2735.JPG,True,0.5322,0.8506,1.5980
+color/Soybean___healthy/aa4e699f-3ab1-4382-83ac-99856a8f1979___RS_HL 7248.JPG,True,0.4534,0.7995,1.7635
+color/Orange___Haunglongbing_(Citrus_greening)/93aee352-af7f-4848-9afd-5a81f3277632___UF.Citrus_HLB_Lab 9757.JPG,True,0.6112,0.9176,1.5014
+color/Peach___Bacterial_spot/b2ef8497-ea1a-4be0-8d1b-88d72cae0b37___Rutg._Bact.S 2092.JPG,True,0.3079,0.7938,2.5780
+color/Cherry_(including_sour)___Powdery_mildew/fee69dd9-eeb1-4cf2-b249-17482605f1f7___FREC_Pwd.M 4689.JPG,True,0.5497,0.9148,1.6640
+color/Potato___Early_blight/3d3c01e1-8cde-4c0f-9468-67dd287a2dc0___RS_Early.B 7761.JPG,True,0.5587,0.9000,1.6110
+color/Tomato___Bacterial_spot/393946a5-3f5d-4ed3-af1f-fcb7647b369d___GCREC_Bact.Sp 6190.JPG,True,0.4960,0.9163,1.8475
+color/Soybean___healthy/eb195e22-6cd3-4642-985a-c447c07a1742___RS_HL 4309.JPG,True,0.4224,0.7414,1.7551
+color/Tomato___Leaf_Mold/b0696bcc-f563-492a-8698-da44e0fe7e6a___Crnl_L.Mold 6957.JPG,True,0.2482,0.6941,2.7962
+color/Cherry_(including_sour)___Powdery_mildew/182a4f7e-026f-4f73-a3a6-3345b9f82840___FREC_Pwd.M 4691.JPG,True,0.4378,0.8950,2.0445
+color/Peach___Bacterial_spot/41797a1b-7683-476e-9138-b8f1c67ff372___Rutg._Bact.S 1213.JPG,True,0.3223,0.6920,2.1471
+color/Orange___Haunglongbing_(Citrus_greening)/f6b8989d-b4f0-46b2-b81c-8da000bfdbdb___CREC_HLB 4682.JPG,True,0.3885,0.7672,1.9750
+color/Tomato___Late_blight/c5150ba8-d8c4-47a3-9938-83715b767693___RS_Late.B 6912.JPG,True,0.5011,0.7064,1.4097
+color/Orange___Haunglongbing_(Citrus_greening)/068215ce-b2fe-46b2-be51-4876fbbcfca5___CREC_HLB 7354.JPG,True,0.3850,0.7361,1.9119
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/55c9cde4-88d3-4bd4-9395-c928160ed877___YLCV_NREC 0260.JPG,True,0.2664,0.7399,2.7771
+color/Apple___Black_rot/a0d95497-da4c-40dd-bc2a-d29d1629bd4f___JR_FrgE.S 8759.JPG,True,0.3900,0.7112,1.8234
+color/Orange___Haunglongbing_(Citrus_greening)/f3f978ac-a443-427b-b837-5f14a0cc7134___CREC_HLB 5446.JPG,True,0.5553,0.8546,1.5391
+color/Squash___Powdery_mildew/51647056-22bf-4467-88da-f06f548dcf83___UMD_Powd.M 0646.JPG,True,0.7289,0.9207,1.2630
+color/Strawberry___Leaf_scorch/7742ea93-4001-46da-84e7-15aa856472d5___RS_L.Scorch 9922.JPG,True,0.5644,0.7431,1.3167
+color/Grape___Black_rot/a3dfcf0a-ac90-4036-9fee-9862f13c0783___FAM_B.Rot 3372.JPG,True,0.4804,0.8452,1.7592
+color/Tomato___Bacterial_spot/760d6620-5a8a-4566-92bf-8a3b5a8d81b2___GCREC_Bact.Sp 6188.JPG,True,0.5583,0.9101,1.6300
+color/Orange___Haunglongbing_(Citrus_greening)/013a85ae-e159-49c2-865d-03079253fc74___CREC_HLB 4518.JPG,True,0.4848,0.7983,1.6465
+color/Orange___Haunglongbing_(Citrus_greening)/b21337d4-4851-4366-a9b2-90c7fb89865f___CREC_HLB 5565.JPG,True,0.5043,0.8463,1.6782
+color/Apple___healthy/2e7471ae-fd24-4038-9caf-98f4cf2a6946___RS_HL 7437.JPG,True,0.3145,0.7693,2.4465
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/94255d4c-a15a-4a7d-8f20-f61c69d08242___YLCV_NREC 2929.JPG,True,0.2478,0.6634,2.6776
+color/Soybean___healthy/669ddba0-ae8e-4d23-b4b0-afaabac32e68___RS_HL 6209.JPG,True,0.5866,0.8355,1.4243
+color/Apple___Black_rot/9eaff91a-1260-4d17-844d-65ab1ee09752___JR_FrgE.S 2736.JPG,True,0.5577,0.8321,1.4921
+color/Tomato___Bacterial_spot/28557b27-1dce-4cd4-bed0-c4a84207d3e2___GCREC_Bact.Sp 6187.JPG,True,0.5529,0.9154,1.6557
+color/Grape___Esca_(Black_Measles)/b538f749-4eb9-4b3b-a55e-f5b293ac2d2a___FAM_B.Msls 1248.JPG,True,0.3833,0.8143,2.1244
+color/Orange___Haunglongbing_(Citrus_greening)/4bfc409d-d40f-4aad-a575-18206d3e7c5e___UF.Citrus_HLB_Lab 0733.JPG,True,0.5291,0.8770,1.6577
+color/Strawberry___Leaf_scorch/138221c0-7ae2-4407-ba88-ffd1e711204b___RS_L.Scorch 1587.JPG,True,0.5799,0.8803,1.5180
+color/Apple___Black_rot/7f11ba2d-0894-4240-9d41-b0e131d8e711___JR_FrgE.S 2731.JPG,True,0.4964,0.7867,1.5847
+color/Cherry_(including_sour)___Powdery_mildew/a2bf26c3-9f0b-4b47-be11-ab058cc9a133___FREC_Pwd.M 5165.JPG,True,0.4304,0.8195,1.9043
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/82c706b4-04f5-48bf-b509-8e7a890d0950___YLCV_GCREC 2370.JPG,True,0.3209,0.7600,2.3683
+color/Tomato___Late_blight/85a581dc-108b-4ca0-9f34-f8b2baeccbe6___GHLB2 Leaf 8788.JPG,True,0.3125,0.7921,2.5347
+color/Tomato___Septoria_leaf_spot/8b9ca191-719d-40cf-9077-89d9534dee6b___JR_Sept.L.S 8457.JPG,True,0.0105,0.0123,1.1755
+color/Peach___healthy/5a40aaba-8352-4bd0-bfec-b9fcf89a891b___Rutg._HL 3612.JPG,True,0.2321,0.6183,2.6634
+color/Apple___Black_rot/0b37761a-de32-47ee-a3a4-e138b97ef542___JR_FrgE.S 2908.JPG,True,0.4626,0.7547,1.6316
+color/Soybean___healthy/1310b52d-aa64-4d6c-adf6-407b14fa6ec8___RS_HL 4322.JPG,True,0.4194,0.7134,1.7008
+color/Apple___Apple_scab/94ef05b0-aee5-4956-8a07-67808c0ca84c___FREC_Scab 3376.JPG,True,0.7035,0.9194,1.3068
+color/Orange___Haunglongbing_(Citrus_greening)/abb130a9-d84e-4104-8568-85ae0191ebaf___CREC_HLB 5464.JPG,True,0.5523,0.8563,1.5506
+color/Orange___Haunglongbing_(Citrus_greening)/6eb940fa-5ae3-456f-886a-7c7f4bb7c245___UF.Citrus_HLB_Lab 1132.JPG,True,0.4916,0.8206,1.6692
+color/Tomato___Late_blight/2f08688f-f6ea-4772-bfa3-5a995e38988c___GHLB2 Leaf 8827.JPG,True,0.1554,0.6248,4.0216
+color/Tomato___Bacterial_spot/67ce694b-bfcc-4e74-8ec7-9404011802e7___GCREC_Bact.Sp 6154.JPG,True,0.3798,0.8466,2.2292
+"color/Pepper,_bell___Bacterial_spot/41da62b7-c3af-4604-aaa5-c457356e04bd___JR_B.Spot 9034.JPG",True,0.6059,0.9176,1.5145
+color/Tomato___Late_blight/26fa9fb7-10fa-496c-9433-e4053ff456da___RS_Late.B 4867.JPG,True,0.4171,0.5770,1.3833
+color/Squash___Powdery_mildew/0df0f392-1337-48e2-accc-fb10afd211cf___UMD_Powd.M 0602.JPG,True,0.7734,0.9309,1.2037
+color/Strawberry___healthy/9435833a-129a-4fe6-830c-e2447faccdc6___RS_HL 4537.JPG,True,0.5943,0.9241,1.5550
+color/Grape___Esca_(Black_Measles)/076cb968-84a0-44bd-a278-1c9791de8bd9___FAM_B.Msls 3938.JPG,True,0.4159,0.7833,1.8834
+color/Blueberry___healthy/9fee8a1e-e941-4304-8b5b-0ffad5bcac4a___RS_HL 0752.JPG,True,0.3471,0.8307,2.3934
+color/Tomato___Spider_mites Two-spotted_spider_mite/b4734f01-4373-4566-ab26-535b4883d443___Com.G_SpM_FL 8816.JPG,True,0.4449,0.9039,2.0319
+color/Grape___Black_rot/68083fb3-c433-43d8-a509-7435803558fc___FAM_B.Rot 3185.JPG,True,0.5121,0.8482,1.6563
+color/Orange___Haunglongbing_(Citrus_greening)/b25e7224-53dd-4d26-8a74-903dc4373719___UF.Citrus_HLB_Lab 0174.JPG,True,0.5613,0.8769,1.5621
+color/Apple___healthy/4cd37f4e-557b-4317-8772-21abd1efec65___RS_HL 7420.JPG,True,0.5671,0.9090,1.6031
+color/Tomato___Spider_mites Two-spotted_spider_mite/48607635-07da-4682-893a-d163e7abc3ae___Com.G_SpM_FL 1402.JPG,True,0.2430,0.7829,3.2224
+color/Apple___Cedar_apple_rust/f5a27cbb-be27-4416-b9ae-a811e885c131___FREC_C.Rust 3788.JPG,True,0.5043,0.9166,1.8175
+color/Potato___Early_blight/82611670-959a-401b-8ed0-4b4fdad5679e___RS_Early.B 8003.JPG,True,0.6094,0.9268,1.5207
+color/Soybean___healthy/2d85e3b4-48c4-488b-9789-1485b7a19741___RS_HL 5537.JPG,True,0.6264,0.8711,1.3906
+color/Apple___Cedar_apple_rust/d7fb4740-9707-484f-9809-b7efa8f7851d___FREC_C.Rust 4344.JPG,True,0.3286,0.8623,2.6243
+color/Peach___Bacterial_spot/63f1a995-24a2-4231-b3e4-50d2efd02229___Rutg._Bact.S 1345.JPG,True,0.5200,0.8184,1.5738
+color/Potato___Early_blight/b99ba68b-4608-4335-a292-b4249d83762d___RS_Early.B 9096.JPG,True,0.4783,0.8803,1.8405
+color/Orange___Haunglongbing_(Citrus_greening)/6f142a37-8a5c-437c-b588-698dfa654fd8___CREC_HLB 7833.JPG,True,0.3683,0.7090,1.9249
+color/Soybean___healthy/8c32c2a4-73b9-4b32-a514-e06a12f7dfe1___RS_HL 6299.JPG,True,0.5645,0.8056,1.4271
+color/Strawberry___healthy/77c79af8-cfa3-447a-8780-55f9c3836a12___RS_HL 4509.JPG,True,0.6349,0.9304,1.4653
+color/Soybean___healthy/758537b1-bc0d-4c52-b723-a0d734dc594a___RS_HL 6405.JPG,True,0.6624,0.8331,1.2577
+color/Squash___Powdery_mildew/98e2696d-c3d6-485a-be0d-6db625b75b0e___UMD_Powd.M 0661.JPG,True,0.6564,0.9012,1.3729
+color/Tomato___Leaf_Mold/156f079b-411f-41db-8023-fa934de343f9___Crnl_L.Mold 7039.JPG,True,0.2222,0.7208,3.2441
+color/Tomato___Target_Spot/8f2ba5ed-f8a4-4b31-9da4-5e4229bd0274___Com.G_TgS_FL 7880.JPG,True,0.5724,0.8854,1.5468
+color/Tomato___Late_blight/def2ded7-c610-404f-909f-83325dc4c85e___RS_Late.B 6854.JPG,True,0.3087,0.5298,1.7163
+color/Tomato___Spider_mites Two-spotted_spider_mite/47f32cb8-f809-408c-b6cb-2e9494e244a2___Com.G_SpM_FL 8490.JPG,True,0.2544,0.7932,3.1172
+color/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/4c8b2623-41a0-4b0f-a78a-acb446063cc9___FAM_L.Blight 3690.JPG,True,0.4829,0.8507,1.7617
+color/Cherry_(including_sour)___Powdery_mildew/d52d3a42-951f-4534-b306-1a8a5d876981___FREC_Pwd.M 4679.JPG,True,0.4619,0.8828,1.9113
+color/Squash___Powdery_mildew/fd080666-a8cf-4454-bd5b-36d82bb2b817___MD_Powd.M 9961.JPG,True,0.6399,0.8794,1.3743
+color/Tomato___Leaf_Mold/7e0d709c-7399-4cad-84d4-892854831ee7___Crnl_L.Mold 6694.JPG,True,0.3165,0.7886,2.4918
+color/Orange___Haunglongbing_(Citrus_greening)/ae331d79-480d-480f-a630-bf90c237e355___CREC_HLB 3951.JPG,True,0.4319,0.7983,1.8484
+color/Tomato___Late_blight/13533985-e30d-4023-8bd3-7a45b07816ca___RS_Late.B 5593.JPG,True,0.1321,0.3513,2.6604
+color/Tomato___Spider_mites Two-spotted_spider_mite/ddc184a0-ee42-44a4-80ee-ece8e67f1cc9___Com.G_SpM_FL 1231.JPG,True,0.2755,0.8616,3.1278
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/bdc36d59-1287-40e3-8976-a67dca9480c2___YLCV_NREC 2374.JPG,True,0.3721,0.8036,2.1598
+color/Corn_(maize)___Northern_Leaf_Blight/3f7ded82-d9d3-4b3d-9beb-58c5a43f894c___RS_NLB 3656.JPG,True,0.9180,0.9466,1.0311
+"color/Pepper,_bell___healthy/2f9b8f31-1d11-4559-9899-cfe9f92bcc2c___JR_HL 8406.JPG",True,0.5420,0.8143,1.5024
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/b83f0d90-0dce-427a-9cdd-ab8d1f20724f___UF.GRC_YLCV_Lab 01690.JPG,True,0.3862,0.7511,1.9446
+color/Squash___Powdery_mildew/3c2b2487-95db-4880-b43a-8d79b287f96e___MD_Powd.M 9951.JPG,True,0.6849,0.8958,1.3078
+color/Apple___Apple_scab/88079400-60e9-4317-b917-0bee6c8c16f5___FREC_Scab 3411.JPG,True,0.4978,0.8891,1.7862
+color/Orange___Haunglongbing_(Citrus_greening)/9a7a8462-482d-40dd-b762-a81d2e870647___UF.Citrus_HLB_Lab 0043.JPG,True,0.6378,0.9082,1.4239
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/fdf69afe-75b7-4909-9175-57cc7ff96ac4___YLCV_GCREC 2605.JPG,True,0.4318,0.8265,1.9141
+color/Apple___Apple_scab/a0fb83fc-d5a2-4ddf-9a04-c2bf96e5027f___FREC_Scab 3175.JPG,True,0.3396,0.8069,2.3763
+color/Orange___Haunglongbing_(Citrus_greening)/e7e5abb4-c787-4bc7-8a3f-4216b42a96f7___CREC_HLB 4683.JPG,True,0.3964,0.7795,1.9667
+color/Apple___Cedar_apple_rust/c5912efe-a2cc-4203-bc9c-bdc58adcf6a3___FREC_C.Rust 9821.JPG,True,0.3555,0.8205,2.3076
+"color/Pepper,_bell___healthy/974b8791-d05c-42cf-91bf-4bd0684ecc28___JR_HL 7891.JPG",True,0.3767,0.7592,2.0154
+color/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/ccf85694-b813-4442-bc83-3ff017fc7719___FAM_L.Blight 4825.JPG,True,0.5107,0.8783,1.7198
+color/Soybean___healthy/0e36c76a-7485-494c-8e31-a35ab7ef3177___RS_HL 4553.JPG,True,0.4235,0.7190,1.6979
+color/Peach___Bacterial_spot/98183a48-add3-4b6f-b771-dde3b5150c42___Rut._Bact.S 1238.JPG,True,0.2853,0.6808,2.3865
+color/Strawberry___Leaf_scorch/ecf07471-8d4d-4902-a270-9f88e8651c4d___RS_L.Scorch 1545.JPG,True,0.4535,0.8561,1.8878
+color/Tomato___Late_blight/d6dde2e1-097a-4d45-b646-0110aaa06107___GHLB2 Leaf 8816.JPG,True,0.2081,0.5938,2.8531
+color/Apple___healthy/2ab9dfe3-b810-428c-843c-e257a25c4447___RS_HL 7576.JPG,True,0.4843,0.9279,1.9161
+color/Blueberry___healthy/f6109369-c78f-4a19-9510-cf70a02772d7___RS_HL 5094.JPG,True,0.3741,0.8795,2.3511
+color/Cherry_(including_sour)___Powdery_mildew/6bb964c3-86cc-4655-8a2c-adcc061e8fe4___FREC_Pwd.M 5099.JPG,True,0.5462,0.9128,1.6712
+color/Corn_(maize)___Northern_Leaf_Blight/76071bfd-f326-4e3d-b3b9-c2d364ec2d49___RS_NLB 3623.JPG,True,0.5104,0.8206,1.6076
+color/Tomato___Target_Spot/1d8579f3-ef8b-4a8e-be98-7e39fe8bbf9a___Com.G_TgS_FL 7944.JPG,True,0.5058,0.8569,1.6941
+color/Blueberry___healthy/75b03289-1c74-42a7-8889-23b9036b5160___RS_HL 4952.JPG,True,0.4893,0.9000,1.8394
+color/Tomato___Spider_mites Two-spotted_spider_mite/3a190004-02f9-4284-9750-d12fe0272a6f___Com.G_SpM_FL 8922.JPG,True,0.2339,0.7969,3.4071
+color/Cherry_(including_sour)___Powdery_mildew/e3e0ee86-1cf9-449c-8cba-7ad0b0cd4488___FREC_Pwd.M 0460.JPG,True,0.4035,0.8650,2.1439
+color/Tomato___Septoria_leaf_spot/286a4fc5-4657-472f-bcbe-dbf38e94bb8e___JR_Sept.L.S 8417.JPG,True,0.3068,0.7213,2.3508
+color/Blueberry___healthy/0e0c9a84-af5e-454e-bb0d-606113953200___RS_HL 5092.JPG,True,0.4202,0.9050,2.1538
+color/Soybean___healthy/b160c9b7-b174-456b-a15e-ef0b0c766c05___RS_HL 6690.JPG,True,0.5578,0.7613,1.3649
+color/Tomato___healthy/717a4bbc-52b1-42c1-a718-ca94744ff52d___RS_HL 9726.JPG,True,0.3983,0.8219,2.0635
+color/Peach___Bacterial_spot/b83717cb-6bc2-410d-bcb9-a86cc3d1093c___Rutg._Bact.S 2108.JPG,True,0.2993,0.6756,2.2568
+color/Grape___Esca_(Black_Measles)/786e0151-30e0-48e3-85bf-ff198b228bc9___FAM_B.Msls 1800.JPG,True,0.5615,0.8746,1.5577
+color/Tomato___Late_blight/08a94695-4566-49aa-84df-91980c3534a2___RS_Late.B 5396.JPG,True,0.3669,0.5691,1.5513
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/3c9052df-503d-4eb7-b0a7-db7c1fb010cd___YLCV_NREC 2338.JPG,True,0.2437,0.6541,2.6841
+color/Blueberry___healthy/196a40ba-919b-49af-9074-f6d08b0377da___RS_HL 5435.JPG,True,0.3157,0.8236,2.6085
+color/Apple___Black_rot/8f3ed2e0-268d-485c-bfd0-0911db9ab888___JR_FrgE.S 8820.JPG,True,0.4387,0.7771,1.7713
+color/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/2174d811-b088-4b31-8088-1738630b94d4___RS_GLSp 4467.JPG,True,0.7595,0.9387,1.2360
+color/Tomato___Spider_mites Two-spotted_spider_mite/98916e40-9711-49d6-af8b-77c10be459e2___Com.G_SpM_FL 8551.JPG,True,0.4665,0.7652,1.6403
+color/Tomato___healthy/6cabb19a-2a35-4897-a646-a13e3cf494c6___RS_HL 0591.JPG,True,0.4160,0.8336,2.0040
+color/Orange___Haunglongbing_(Citrus_greening)/a3e1483b-a900-4687-b86b-4fbeb417b3a1___UF.Citrus_HLB_Lab 0729.JPG,True,0.5373,0.8638,1.6076
+color/Tomato___healthy/b3813caa-82f2-4b9b-a5ef-a9f0db6f08bf___GH_HL Leaf 466.JPG,True,0.3963,0.8284,2.0904
+"color/Pepper,_bell___Bacterial_spot/948bc0e0-8552-426a-898f-270b9573c28f___NREC_B.Spot 9062.JPG",True,0.3989,0.8493,2.1291
+color/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/468d93ab-7a44-4ae7-a489-a03d39651009___RS_GLSp 4466.JPG,True,0.8306,0.9668,1.1640
+color/Apple___Black_rot/acb4845c-bee1-478c-b11c-ade0ae397c51___JR_FrgE.S 8818.JPG,True,0.4646,0.7842,1.6879
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/ea6a0d1e-864c-4ae3-82aa-afc17b14200e___YLCV_NREC 2738.JPG,True,0.3959,0.7780,1.9650
+color/Squash___Powdery_mildew/10df6a05-cc57-4ac9-8aec-7dfb38630a35___MD_Powd.M 0020.JPG,True,0.5686,0.8836,1.5540
+color/Peach___Bacterial_spot/f8f51838-3e3e-4536-9d92-ff1bd03a0c8d___Rutg._Bact.S 1295.JPG,True,0.3011,0.7009,2.3280
+color/Apple___healthy/51cb81e8-dd15-40cd-b4f2-5287379dfe74___RS_HL 6104.JPG,True,0.3892,0.8383,2.1542
+color/Orange___Haunglongbing_(Citrus_greening)/da949f65-9ae8-4475-a1ed-481c6f2e6d32___UF.Citrus_HLB_Lab 0101.JPG,True,0.4935,0.8598,1.7423
+"color/Pepper,_bell___Bacterial_spot/61ff52bd-c262-4198-8067-76d89a0468a9___NREC_B.Spot 9176.JPG",True,0.4178,0.8021,1.9197
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/53578c92-d46e-4d7d-950e-66ad61da023a___UF.GRC_YLCV_Lab 01618.JPG,True,0.4212,0.8758,2.0792
+color/Tomato___Bacterial_spot/ceecc090-5ec1-4a73-b628-7d8bcfc55f45___GCREC_Bact.Sp 6354.JPG,True,0.5266,0.8946,1.6987
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/17e67b5d-d635-40ef-8c7a-fd10e08c9421___YLCV_GCREC 2647.JPG,True,0.3921,0.7517,1.9170
+color/Apple___Black_rot/934ee916-4db9-4c1a-903e-3ebdd8201178___JR_FrgE.S 8740.JPG,True,0.4147,0.7910,1.9072
+"color/Pepper,_bell___healthy/a630dfe7-57e4-4053-9045-5168f8e0a4b3___JR_HL 8044.JPG",True,0.5725,0.8605,1.5030
+color/Apple___healthy/03d420e7-42a1-41d8-9600-16d577043c64___RS_HL 5738.JPG,True,0.5800,0.8938,1.5410
+color/Corn_(maize)___healthy/4ea4d667-2e5d-4440-83ee-5b0d68217272___R.S_HL 0651 copy 3.jpg,True,1.0000,1.0000,1.0000
+color/Orange___Haunglongbing_(Citrus_greening)/0f3d1946-dcde-4466-9907-46ddf6c11f9e___UF.Citrus_HLB_Lab 1601.JPG,True,0.6018,0.8902,1.4794
+color/Potato___Early_blight/4c8df1cf-82bb-49eb-894c-8a516fbd1d74___RS_Early.B 6753.JPG,True,0.5516,0.9270,1.6808
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/da7239e3-8854-4f6c-b5e2-4609c1ec4214___YLCV_GCREC 2283.JPG,True,0.2919,0.7231,2.4775
+color/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/ac025db6-6342-4dd6-9ea0-19ffc2d112ef___FAM_L.Blight 4939.JPG,True,0.5283,0.8439,1.5974
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/1240c7a7-a64a-4659-8849-5451c205208d___UF.GRC_YLCV_Lab 01888.JPG,True,0.5602,0.7750,1.3833
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/8d5df3cd-fbf3-4eaa-a884-b9089a10ff91___UF.GRC_YLCV_Lab 01654.JPG,True,0.3456,0.7224,2.0900
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/39024c18-9ae7-41b4-8ade-113eb7c575e3___UF.GRC_YLCV_Lab 01746.JPG,True,0.5492,0.8107,1.4760
+color/Apple___Apple_scab/80870a3d-e028-47c6-9548-cef00d68be2c___FREC_Scab 3469.JPG,True,0.4911,0.9129,1.8590
+color/Orange___Haunglongbing_(Citrus_greening)/c47b9695-8a04-435b-b0b2-2d0dc5a4ecda___CREC_HLB 5718.JPG,True,0.4680,0.7821,1.6712
+color/Cherry_(including_sour)___Powdery_mildew/2a4aa38d-38dc-4e3d-8584-e248d9f1349d___FREC_Pwd.M 0502.JPG,True,0.5494,0.8941,1.6275
+color/Tomato___Spider_mites Two-spotted_spider_mite/cf3bd731-bbcd-494e-86a2-793f1e944bb5___Com.G_SpM_FL 9462.JPG,True,0.3647,0.8859,2.4294
+color/Orange___Haunglongbing_(Citrus_greening)/aff0f89b-c205-4d33-b5c2-4570fb4833f1___CREC_HLB 7171.JPG,True,0.4438,0.7885,1.7768
+color/Tomato___Late_blight/d7b354a6-7044-408d-85ee-b34576e901a4___RS_Late.B 4872.JPG,True,0.4801,0.7509,1.5641
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/31d70d89-c1d5-45ab-8b06-76a3f4b8e403___YLCV_NREC 2181.JPG,True,0.3408,0.6632,1.9458
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/da24f7ae-4d47-45ed-99a0-75994f8e92cb___UF.GRC_YLCV_Lab 01843.JPG,True,0.3985,0.7472,1.8749
+color/Tomato___Leaf_Mold/a9bfbf7a-3669-4b5e-a5c7-ac8fcd03fd48___Crnl_L.Mold 7094.JPG,True,0.3127,0.8080,2.5841
+color/Tomato___Early_blight/4283992b-ab8a-41aa-baeb-17a5b0f75af1___RS_Erly.B 7621.JPG,True,0.3411,0.5752,1.6864
+color/Soybean___healthy/60a8ede0-6a27-4f4d-85ad-25c6f0ba5b86___RS_HL 5672.JPG,True,0.6155,0.8489,1.3792
+color/Tomato___Septoria_leaf_spot/cc24a097-d7aa-46b3-808d-d31acc19c97b___Matt.S_CG 2645.JPG,True,0.4035,0.8454,2.0955
+color/Tomato___Bacterial_spot/16bbb84a-b078-4c74-8ab0-872ac7240052___UF.GRC_BS_Lab Leaf 8605.JPG,True,0.4955,0.8460,1.7074
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/f7e3ba41-b93f-4251-81b6-25732542863b___YLCV_GCREC 2473.JPG,True,0.5352,0.8818,1.6478
+color/Orange___Haunglongbing_(Citrus_greening)/c04a0aa7-fa5a-4033-b6bb-a2fc6f871b7e___UF.Citrus_HLB_Lab 1273.JPG,True,0.5581,0.8723,1.5631
+color/Grape___Esca_(Black_Measles)/f9e452d3-c5a1-4670-907e-b1498c25a872___FAM_B.Msls 4456.JPG,True,0.4121,0.8222,1.9951
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/1f20e2cd-2171-48dd-9291-a7e6ab6d3b22___YLCV_GCREC 2476.JPG,True,0.5674,0.8036,1.4163
+color/Potato___Late_blight/f37f6160-4f5b-447f-b497-cc6eb7662e3b___RS_LB 4951.JPG,True,0.4894,0.8560,1.7489
+color/Orange___Haunglongbing_(Citrus_greening)/33a9a86c-0135-4f04-8d0e-701f60eed502___CREC_HLB 7605.JPG,True,0.3772,0.7275,1.9287
+color/Tomato___Late_blight/9f79bf03-7797-491c-98c8-e7fd2c49f435___RS_Late.B 5520.JPG,True,0.2267,0.3799,1.6757
+color/Tomato___healthy/b1bbc0cc-730b-4154-85df-4e1de49f19f9___RS_HL 0384.JPG,True,0.3838,0.7123,1.8561
+color/Orange___Haunglongbing_(Citrus_greening)/3a791d13-81d6-43a3-a248-95f30ce0c711___CREC_HLB 4345.JPG,True,0.6028,0.9019,1.4960
+color/Orange___Haunglongbing_(Citrus_greening)/125df25f-e712-4ece-ae0e-6a93d9151527___UF.Citrus_HLB_Lab 9762.JPG,True,0.5373,0.8807,1.6392
+color/Tomato___Bacterial_spot/59738947-4377-41ba-8a10-0335fdc27ab7___GCREC_Bact.Sp 3734.JPG,True,0.5797,0.8992,1.5511
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/34f24add-23dc-4ac4-8efd-5c4e065e48bc___UF.GRC_YLCV_Lab 01946.JPG,True,0.4566,0.7631,1.6714
+color/Peach___Bacterial_spot/142b7ff5-e70b-4c5c-9f39-97b644acd07c___Rutg._Bact.S 2106.JPG,True,0.2258,0.6158,2.7270
+color/Apple___Black_rot/eb36abb9-44c2-47e1-86fe-36c834ed7add___JR_FrgE.S 8644.JPG,True,0.5187,0.8156,1.5723
+color/Corn_(maize)___Northern_Leaf_Blight/ad75b9e5-d8c8-4719-8bfa-61bad83ff706___RS_NLB 3565.JPG,True,0.9998,1.0000,1.0002
+color/Orange___Haunglongbing_(Citrus_greening)/011aaf7b-9b6f-4561-b28b-1c9c1b250a1d___UF.Citrus_HLB_Lab 0162.JPG,True,0.4790,0.8215,1.7149
+color/Strawberry___Leaf_scorch/c1f18830-3536-4082-87ce-1296af942a28___RS_L.Scorch 9920.JPG,True,0.3975,0.6730,1.6931
+color/Tomato___healthy/f62d9b06-1625-4277-9347-0f3097c41fcf___GH_HL Leaf 518.2.JPG,True,0.2048,0.7516,3.6696
+color/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/27e65f9d-3d4f-41e3-ab13-218efd033b6c___FAM_L.Blight 1660.JPG,True,0.5866,0.8883,1.5145
+color/Tomato___Septoria_leaf_spot/22368f32-693c-4a7f-b235-76f020778d18___Matt.S_CG 6918.JPG,True,0.3922,0.7992,2.0375
+color/Apple___healthy/0afaaf78-6ec5-49ee-a070-f6217039ed2d___RS_HL 7827.JPG,True,0.3485,0.8884,2.5493
+color/Apple___healthy/44acd453-48a7-48db-997a-34b00a4d437a___RS_HL 7892.JPG,True,0.5060,0.8852,1.7493
+color/Apple___healthy/7c388477-2953-4b3d-8f22-7f9eed5fff5c___RS_HL 7527.JPG,True,0.5603,0.8885,1.5858
+color/Grape___healthy/869e0f89-3cd1-4080-8789-7f13de41afac___Mt.N.V_HL 6144.JPG,True,0.5162,0.8875,1.7191
+color/Cherry_(including_sour)___Powdery_mildew/f22b9bbe-1c84-4e0b-bc23-f9da36765801___FREC_Pwd.M 0472.JPG,True,0.3358,0.8521,2.5377
+color/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/784fb0b2-fbc1-4258-985e-0d3e74b87bb1___FAM_L.Blight 1521.JPG,True,0.5715,0.8953,1.5666
+"color/Pepper,_bell___healthy/a7766fc4-117e-4e48-bc2d-e2639512ad69___JR_HL 7957.JPG",True,0.4554,0.7839,1.7213
+color/Tomato___healthy/20d3ba25-f161-4ede-a42a-7a3020ebda3d___RS_HL 0124.JPG,True,0.4078,0.7612,1.8669
+color/Strawberry___healthy/15a5c256-859d-4cff-8b3f-597b8baf3329___RS_HL 4843.JPG,True,0.5353,0.9114,1.7028
+color/Apple___healthy/b17878ef-2476-4eba-9bdf-0a7950edae2a___RS_HL 7957.JPG,True,0.5568,0.8378,1.5047
+color/Potato___Late_blight/d7e7afff-cb91-4209-bf42-ce579f273cce___RS_LB 4468.JPG,True,0.4462,0.8625,1.9328
+color/Blueberry___healthy/edf708f8-07b7-4c5a-acef-dd38e6e1909a___RS_HL 5089.JPG,True,0.3205,0.8227,2.5667
+color/Tomato___Tomato_Yellow_Leaf_Curl_Virus/f007d282-37d7-4acc-b463-afc4a6152fac___UF.GRC_YLCV_Lab 01937.JPG,True,0.3735,0.7873,2.1082
+color/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/2911967b-09f2-4dd8-81e6-f9ed31422228___FAM_L.Blight 4974.JPG,True,0.6116,0.8873,1.4507
+color/Tomato___Early_blight/ba19f779-d0cf-4bc7-88df-96e6080fdc96___RS_Erly.B 7599.JPG,False,0.1165,0.2300,1.9752
+color/Tomato___Bacterial_spot/bc185bd9-5335-4fd5-b426-8c30b56feda3___UF.GRC_BS_Lab Leaf 8782.JPG,False,0.3868,0.5800,1.4993
+color/Tomato___Bacterial_spot/4707268c-7dea-4327-9b13-a8da598c4356___GCREC_Bact.Sp 3643.JPG,False,0.3429,0.4958,1.4458
+color/Potato___Late_blight/bd632f59-ff1c-452f-b504-053fa95ab000___RS_LB 4356.JPG,False,0.3551,0.5349,1.5065
+color/Tomato___Target_Spot/17b9c917-6c33-4f94-a976-64812727073c___Com.G_TgS_FL 7875.JPG,False,0.4303,0.7468,1.7354
+color/Tomato___Septoria_leaf_spot/2967e646-0a62-4db8-a568-57c1e14c93b5___JR_Sept.L.S 8428.JPG,False,0.2036,0.6585,3.2340
+color/Tomato___Bacterial_spot/45fdc702-5ea8-43a9-acad-2bd8d3fe5c55___GCREC_Bact.Sp 3636.JPG,False,0.4426,0.7959,1.7984
+color/Potato___Late_blight/f3ee2886-4ada-4287-94b6-c4c93005b887___RS_LB 4352.JPG,False,0.3442,0.7185,2.0873
+color/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/bbde9366-ec3c-4354-815b-5b95b6cdb676___RS_GLSp 4481.JPG,False,0.7850,0.9140,1.1645
+color/Tomato___Late_blight/d674cbf6-0cdc-407a-97ea-c3f53f2c51e4___GH_HL Leaf 170.JPG,False,0.2730,0.7303,2.6749
+color/Tomato___Target_Spot/0ff11bec-6751-47dc-86a0-cf28682f13d3___Com.G_TgS_FL 7907.JPG,False,0.4059,0.8046,1.9821
+color/Tomato___Target_Spot/5c2ec1a6-59dc-444d-9f75-b4717229743f___Com.G_TgS_FL 7906.JPG,False,0.3614,0.7214,1.9963
+color/Tomato___healthy/7de93009-6180-4027-8779-76947cda3e2f___2700323949_95aa2eaa01_o.jpg,False,0.4273,0.4059,0.9499
+color/Tomato___Target_Spot/b9e0a7ff-7055-4184-a8bd-ff4321dc8dee___Com.G_TgS_FL 7866.JPG,False,0.3622,0.7086,1.9565
+color/Tomato___Target_Spot/0044d10f-7062-4655-8abd-9fffc5b2f152___Com.G_TgS_FL 7908.JPG,False,0.4139,0.7845,1.8955
+color/Tomato___Target_Spot/6a13c6e8-ed63-44bb-bddd-6fcbb92e1c3f___Com.G_TgS_FL 8029.JPG,False,0.4227,0.7544,1.7849
+color/Corn_(maize)___Northern_Leaf_Blight/8a936e9c-617d-4f4c-834a-6b4cb40db290___RS_NLB 3660.JPG,False,0.7229,0.9534,1.3189
+color/Tomato___Bacterial_spot/1a50d84b-c015-45ea-a041-500d5adcc339___UF.GRC_BS_Lab Leaf 8773.JPG,False,0.4129,0.7222,1.7490
+color/Corn_(maize)___Northern_Leaf_Blight/0a11f9e8-7357-48c2-8550-daeae59a1e76___RS_NLB 3588.JPG,False,0.9927,0.9964,1.0037
+color/Tomato___Bacterial_spot/88a4e8ec-ef71-4847-b778-90eae647f331___UF.GRC_BS_Lab Leaf 0640.JPG,False,0.2486,0.7177,2.8868
+color/Tomato___Bacterial_spot/3c7e6602-8832-4502-9a10-fc06389b9604___UF.GRC_BS_Lab Leaf 0641.JPG,False,0.2809,0.7184,2.5578
+color/Corn_(maize)___Northern_Leaf_Blight/8970b98a-13dc-4293-8795-33436cef05e7___RS_NLB 3559.JPG,False,1.0000,1.0000,1.0000
+color/Tomato___Late_blight/f7b65254-1bf9-4bf5-88fb-52c88373587c___RS_Late.B 5225.JPG,False,0.3132,0.6015,1.9205
+color/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/75d924d6-a630-4e26-9e74-5b1e6dfc5e22___RS_GLSp 4475.JPG,False,0.5925,0.8993,1.5179
+color/Strawberry___Leaf_scorch/5297eecc-3b42-42e6-87af-d01be13b3052___RS_L.Scorch 9910.JPG,False,0.2942,0.5851,1.9885
+color/Tomato___Late_blight/e6636324-6e8e-4981-8bb7-5deafced5fbd___RS_Late.B 5228.JPG,False,0.3065,0.6336,2.0672
+color/Tomato___Late_blight/5b4ca8b4-ed80-43c7-90ca-f9912d9fb7b6___RS_Late.B 5226.JPG,False,0.3505,0.6652,1.8980
+color/Corn_(maize)___Northern_Leaf_Blight/72588a71-5b19-4867-a1d4-1a3addca8ab4___RS_NLB 3553 copy 2.jpg,False,1.0000,1.0000,1.0000
+color/Tomato___Early_blight/f7beb64a-f8be-46d8-b4ea-637fb71e7509___RS_Erly.B 7711.JPG,False,0.5299,0.7999,1.5096
+color/Corn_(maize)___Northern_Leaf_Blight/057c3f91-c15e-464b-b4ba-66b16dbe5149___RS_NLB 3565 copy.jpg,False,0.3236,0.3400,1.0505
+color/Tomato___Bacterial_spot/927b90a6-6318-47b0-93fd-a1c33d2d36c5___GCREC_Bact.Sp 3641.JPG,False,0.3579,0.7448,2.0809
+color/Tomato___Bacterial_spot/ccb77acf-506d-4ebe-a35c-12bbd9e0825f___UF.GRC_BS_Lab Leaf 0653.JPG,False,0.2648,0.6763,2.5539
+color/Tomato___Bacterial_spot/b7db70a8-ca63-409e-9e60-47dce0ac5164___UF.GRC_BS_Lab Leaf 0646.JPG,False,0.2757,0.7040,2.5533
+color/Corn_(maize)___Northern_Leaf_Blight/d3d7a5a3-ee3f-4654-8e90-8e722d433972___RS_NLB 3553.JPG,False,0.8951,0.9429,1.0533
+color/Tomato___Target_Spot/d218823b-77aa-4de0-a51c-66670f00c8f3___Com.G_TgS_FL 7874.JPG,False,0.3469,0.6165,1.7772
+color/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/dcfbea5d-0fe7-460b-bd16-3878cef2da71___RS_GLSp 4482.JPG,False,0.6938,0.8724,1.2574
+color/Apple___healthy/1c85fc77-1843-4a85-8f21-107385d5873c___RS_HL 7272.JPG,False,0.6034,0.8606,1.4264

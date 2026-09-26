@@ -1,0 +1,62 @@
+{
+  "run": "binary_mobilenet_v2",
+  "errors": {
+    "n_images": 7770,
+    "n_errors": 11,
+    "error_rate": 0.0014157014157014157,
+    "confident_errors_over_0.9": 1,
+    "error_confidence_median": 0.65633,
+    "correct_confidence_median": 0.9297,
+    "errors_by_true_class": {
+      "healthy": 6,
+      "diseased": 5
+    },
+    "error_rate_by_crop": {
+      "Pepper,_bell": 0.0136,
+      "Corn_(maize)": 0.0044,
+      "Peach": 0.0025,
+      "Apple": 0.0021,
+      "Tomato": 0.0008,
+      "Blueberry": 0.0,
+      "Orange": 0.0,
+      "Grape": 0.0,
+      "Cherry_(including_sour)": 0.0,
+      "Potato": 0.0,
+      "Raspberry": 0.0,
+      "Soybean": 0.0,
+      "Squash": 0.0,
+      "Strawberry": 0.0
+    }
+  },
+  "gradcam_leaf_focus": {
+    "correct": {
+      "n": 393,
+      "leaf_area": 0.4729,
+      "cam_on_leaf": 0.8478,
+      "focus_ratio": 1.9016
+    },
+    "errors": {
+      "n": 11,
+      "leaf_area": 0.5123,
+      "cam_on_leaf": 0.7805,
+      "focus_ratio": 1.7065
+    }
+  },
+  "background_changed": {
+    "color": {
+      "accuracy": 0.9985842985842985,
+      "macro_f1": 0.9982308439594643,
+      "balanced_accuracy": 0.9981592411425975
+    },
+    "segmented": {
+      "accuracy": 0.9762186309289187,
+      "macro_f1": 0.9708752827527249,
+      "balanced_accuracy": 0.974398990682952
+    },
+    "segmented_gray": {
+      "accuracy": 0.9655761397976613,
+      "macro_f1": 0.9575646624958886,
+      "balanced_accuracy": 0.957952137352722
+    }
+  }
+}

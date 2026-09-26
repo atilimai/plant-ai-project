@@ -1,0 +1,6 @@
+base: train_base.yaml
+run_name: multiclass_efficientnet_b0
+task: multiclass
+
+model:
+  arch: efficientnet_b0

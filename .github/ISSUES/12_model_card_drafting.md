@@ -5,7 +5,7 @@ labels: ["documentation", "release"]
 
 ## Summary
 
-Complete the model card in `MODEL_CARD_DRAFT.md` with actual training details, evaluation results, known limitations, and ethical caveats, once a trained model is ready for release. Replace all placeholder sections with verified content.
+Complete the model card in `MODEL_CARD.md` with actual training details, evaluation results, known limitations, and ethical caveats, once a trained model is ready for release. Replace all placeholder sections with verified content.
 
 ## Why It Matters
 
@@ -13,14 +13,14 @@ A complete and accurate model card is a standard requirement for responsible AI 
 
 ## Acceptance Criteria
 
-- [ ] All placeholder sections in `MODEL_CARD_DRAFT.md` are replaced with real content
-- [ ] Model overview table is filled with actual model name, architecture, and training status
-- [ ] Training details (optimizer, learning rate, batch size, epochs, hardware) are documented
-- [ ] Evaluation metrics table is filled with actual per-class results
-- [ ] Limitations section is reviewed and updated based on failure case analysis
-- [ ] Ethical and practical caveats section is confirmed accurate
-- [ ] Dataset license and attribution section is completed (requires issue #14)
-- [ ] Model card is reviewed before any public release
+- [x] All placeholder sections in `MODEL_CARD.md` are replaced with real content
+- [x] Model overview table is filled with actual model name, architecture, and training status
+- [x] Training details (optimizer, learning rate, batch size, epochs, hardware) are documented
+- [x] Evaluation metrics table is filled with actual per-class results
+- [x] Limitations section is reviewed and updated based on failure case analysis
+- [x] Ethical and practical caveats section is confirmed accurate
+- [x] Dataset license and attribution section is completed (requires issue #14)
+- [x] Model card is reviewed before any public release
 
 ## Dependencies
 
@@ -34,3 +34,9 @@ A complete and accurate model card is a standard requirement for responsible AI 
 - Reference the [Hugging Face model card template](https://huggingface.co/docs/hub/model-cards) for formatting guidance
 - The model card must not contain placeholder accuracy values or fake metrics
 - Include both the binary and multiclass track results in the model card
+
+---
+
+## Status
+
+Done. `MODEL_CARD.md` (replaces `MODEL_CARD.md`) with real training details, test metrics for all four runs, limitations grounded in the failure analysis, and the licence. `scripts/check_release.py` verifies that the quoted accuracy matches `artifacts/reports/summary.json` and that no placeholder text remains.

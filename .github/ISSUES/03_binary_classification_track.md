@@ -13,14 +13,14 @@ A binary classifier is a practical triage tool that can flag potentially disease
 
 ## Acceptance Criteria
 
-- [ ] Binary label mapping (healthy / unhealthy) is implemented in the dataset loader
-- [ ] A fine-tuned MobileNetV2 or EfficientNet B0 model is trained on the binary track
-- [ ] Training and validation loss and accuracy are logged per epoch
-- [ ] Best checkpoint is saved to `models/checkpoints/`
-- [ ] Per-class precision, recall, and F1 are computed on the held-out test set
-- [ ] Confusion matrix is generated and exported to `artifacts/figures/`
-- [ ] Results are documented in `artifacts/reports/`
-- [ ] Experiment config is saved to `configs/`
+- [x] Binary label mapping (healthy / unhealthy) is implemented in the dataset loader
+- [x] A fine-tuned MobileNetV2 or EfficientNet B0 model is trained on the binary track
+- [x] Training and validation loss and accuracy are logged per epoch
+- [x] Best checkpoint is saved to `models/checkpoints/`
+- [x] Per-class precision, recall, and F1 are computed on the held-out test set
+- [x] Confusion matrix is generated and exported to `artifacts/figures/`
+- [x] Results are documented in `artifacts/reports/`
+- [x] Experiment config is saved to `configs/`
 
 ## Dependencies
 
@@ -33,3 +33,9 @@ A binary classifier is a practical triage tool that can flag potentially disease
 - Unhealthy class: all images labeled with any disease category
 - Check class balance and consider weighted loss or oversampling if imbalanced
 - Document any class rebalancing strategy applied
+
+---
+
+## Status
+
+Done. `binary_mobilenet_v2` and `binary_efficientnet_b0`, configs in `configs/`, results in `artifacts/reports/`. Healthy/diseased mapping lives in `src/data/labels.py`; the class imbalance (72% diseased) is handled with inverse-square-root class weights and reported with balanced accuracy, sensitivity and specificity.

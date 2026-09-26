@@ -13,13 +13,13 @@ All downstream training and evaluation depends on having a correctly structured 
 
 ## Acceptance Criteria
 
-- [ ] Dataset downloaded from a documented, versioned source
-- [ ] Download URL and file checksum recorded in `DATASET_NOTES.md`
-- [ ] Raw images stored in `data/raw/` (not committed to git; path documented)
-- [ ] Class distribution documented (number of images per class, total count)
-- [ ] Processed dataset (resized, normalized as needed) stored in `data/processed/`
-- [ ] Official split policy documented in `data/splits/README.md`
-- [ ] Split generation code or instructions reference `leaf_id` constraint (see issue #02)
+- [x] Dataset downloaded from a documented, versioned source
+- [x] Download URL and file checksum recorded in `DATASET_NOTES.md`
+- [x] Raw images stored in `data/raw/` (not committed to git; path documented)
+- [x] Class distribution documented (number of images per class, total count)
+- [x] Processed dataset (resized, normalized as needed) stored in `data/processed/`
+- [x] Official split policy documented in `data/splits/README.md`
+- [x] Split generation code or instructions reference `leaf_id` constraint (see issue #02)
 
 ## Dependencies
 
@@ -31,3 +31,9 @@ All downstream training and evaluation depends on having a correctly structured 
 - Consider using Hugging Face Datasets or Kaggle API for reproducible downloads
 - Record the exact dataset version and any preprocessing steps applied
 - See `DATASET_NOTES.md` for background on dataset limitations
+
+---
+
+## Status
+
+Done. `python -m src.data.prepare` downloads `data.zip` at a pinned revision, verifies both checksums, extracts colour and segmented variants and writes `data/splits/`. Source, checksums and statistics: `DATASET_NOTES.md`. Images stay out of git; processed copies are not written at all, preprocessing happens at load time.

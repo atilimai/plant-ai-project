@@ -1,28 +1,15 @@
-# src/visualization/
+# src/visualization
 
-This directory will contain all visualization utilities for model evaluation and explainability.
+Figure code. Every function takes data and returns a matplotlib figure, and only writes a file when
+`save_path` is given — so the same call works in a notebook and in a script.
 
-## Planned Contents
-
-| Module | Purpose |
+| Module | Figures |
 |---|---|
-| `confusion_matrix.py` | Confusion matrix plot generation (binary and multiclass, normalized and raw counts) |
-| `grad_cam.py` | Grad-CAM heatmap generation and image overlay |
-| `gallery.py` | Sample predictions gallery layout and export |
-| `utils.py` | Shared plotting utilities (figure sizing, color palettes, label rendering) |
+| `confusion_matrix.py` | Row-normalised and raw-count matrices; for 38 classes only non-zero off-diagonal cells are annotated |
+| `plots.py` | Training curves, per-class F1 bars, reliability diagram |
+| `grad_cam.py` | Grad-CAM (own implementation, ~40 lines of hooks), overlay, leaf-focus measure, image/heatmap/overlay triplet |
+| `gallery.py` | Confidence-stratified prediction gallery: confident hits, borderline hits, the most confident errors |
 
-## Output Locations
-
-- Confusion matrix figures → `artifacts/figures/`
-- Grad-CAM heatmaps → `artifacts/figures/`
-- Sample predictions gallery → `artifacts/sample_outputs/`
-
-## Design Notes
-
-- All visualizers should be callable from Colab notebooks with a single function call.
-- Output figures should be exported at sufficient resolution for reports and publications.
-- No implementation code exists in this directory yet.
-
-## Status
-
-Empty placeholder. Implementation begins in Week 3 (see `ROADMAP.md`).
+`leaf_focus()` uses the background-removed copy of an image as a leaf mask and reports how much of
+the Grad-CAM mass falls on the leaf. That turns "is the model looking at the background?" into a
+number; the answer for our models is in `docs/results.md`.

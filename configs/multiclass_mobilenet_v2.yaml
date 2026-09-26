@@ -1,0 +1,6 @@
+base: train_base.yaml
+run_name: multiclass_mobilenet_v2
+task: multiclass
+
+model:
+  arch: mobilenet_v2

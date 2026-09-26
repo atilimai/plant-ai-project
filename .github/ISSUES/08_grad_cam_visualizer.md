@@ -13,13 +13,13 @@ Grad-CAM provides interpretability for the model's predictions, helping verify t
 
 ## Acceptance Criteria
 
-- [ ] Grad-CAM implementation in `src/visualization/` compatible with MobileNetV2 and EfficientNet B0
-- [ ] Generates heatmap overlays on the original leaf image
-- [ ] Supports both correct and incorrect prediction cases
-- [ ] Exported visualizations include: original image, Grad-CAM heatmap, overlay blend
-- [ ] A representative set of Grad-CAM samples exported to `artifacts/figures/`
-- [ ] Visualizer is callable from a Colab notebook
-- [ ] Documentation notes which convolutional layer is used for Grad-CAM extraction
+- [x] Grad-CAM implementation in `src/visualization/` compatible with MobileNetV2 and EfficientNet B0
+- [x] Generates heatmap overlays on the original leaf image
+- [x] Supports both correct and incorrect prediction cases
+- [x] Exported visualizations include: original image, Grad-CAM heatmap, overlay blend
+- [x] A representative set of Grad-CAM samples exported to `artifacts/figures/`
+- [x] Visualizer is callable from a Colab notebook
+- [x] Documentation notes which convolutional layer is used for Grad-CAM extraction
 
 ## Dependencies
 
@@ -32,3 +32,9 @@ Grad-CAM provides interpretability for the model's predictions, helping verify t
 - Test on both correctly classified and misclassified examples
 - Particularly examine cases where the model may be attending to background rather than leaf tissue
 - Grad-CAM layer choice (last convolutional layer) should be documented and justified
+
+---
+
+## Status
+
+Done. Own Grad-CAM implementation (`src/visualization/grad_cam.py`, forward/backward hooks, no extra dependency) on `model.features[-1]` for both backbones. Figures for correct and for the most confident incorrect predictions, plus a quantitative leaf-focus measure using the dataset's segmented masks.

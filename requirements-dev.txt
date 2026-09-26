@@ -1,0 +1,10 @@
+-r requirements.txt
+pytest>=8.0
+ruff>=0.5
+nbformat>=5.9
+nbconvert>=7.16
+ipykernel>=6.29
+onnx>=1.16
+onnxruntime>=1.18
+gradio>=4.44
+huggingface_hub>=0.24

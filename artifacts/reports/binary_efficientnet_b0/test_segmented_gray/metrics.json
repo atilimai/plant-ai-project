@@ -1,0 +1,54 @@
+{
+  "n_samples": 7611,
+  "accuracy": 0.9704375246353961,
+  "balanced_accuracy": 0.9535773112561274,
+  "macro_precision": 0.973211295457115,
+  "macro_recall": 0.9535773112561274,
+  "macro_f1": 0.9627700204827663,
+  "weighted_precision": 0.9706551055454726,
+  "weighted_recall": 0.9704375246353961,
+  "weighted_f1": 0.9701245199783258,
+  "per_class": [
+    {
+      "class": "healthy",
+      "precision": 0.9790836653386454,
+      "recall": 0.9148441135411819,
+      "f1": 0.9458744286745249,
+      "support": 2149
+    },
+    {
+      "class": "diseased",
+      "precision": 0.9673389255755845,
+      "recall": 0.9923105089710729,
+      "f1": 0.9796656122910077,
+      "support": 5462
+    }
+  ],
+  "ece": 0.06952409464055864,
+  "roc_auc": 0.995396980261612,
+  "average_precision": 0.9978881570259546,
+  "sensitivity": 0.9923105089710729,
+  "specificity": 0.9148441135411819,
+  "false_negatives": 42,
+  "false_positives": 183,
+  "run": "binary_efficientnet_b0",
+  "task": "binary",
+  "arch": "efficientnet_b0",
+  "split": "test",
+  "variant": "segmented_gray",
+  "loss": 0.1344766674460257,
+  "top_confusions": [
+    {
+      "true": "healthy",
+      "predicted": "diseased",
+      "count": 183,
+      "share_of_true_class": 0.08515588645881805
+    },
+    {
+      "true": "diseased",
+      "predicted": "healthy",
+      "count": 42,
+      "share_of_true_class": 0.007689491028927133
+    }
+  ]
+}

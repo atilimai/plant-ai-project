@@ -1,22 +1,16 @@
-# src/inference/
+# src/inference
 
-This directory will contain inference utilities for running predictions with trained model checkpoints.
-
-## Planned Contents
-
-| Module | Purpose |
+| Module | What it does |
 |---|---|
-| `predictor.py` | Loads a checkpoint and runs inference on a single image or batch |
-| `export.py` | Exports trained models to ONNX or TorchScript format |
+| `predictor.py` | `Predictor.load(path)` accepts a training checkpoint or an exported folder; `predict`, `predict_proba`, `explain` (prediction + Grad-CAM overlay) |
+| `export.py` | Writes `model.safetensors` + `config.json` (+ optional ONNX, checked against PyTorch) to `models/exported/<run>/` |
+| `predict.py` | CLI for classifying image files |
 
-## Design Notes
+```bash
+python -m src.inference.export --checkpoint models/checkpoints/multiclass_mobilenet_v2/best.pt --onnx
+python -m src.inference.predict --model models/exported/multiclass_mobilenet_v2 leaf.jpg
+```
 
-- The predictor should support loading from local checkpoints (`models/checkpoints/`)
-  and from Hugging Face Hub.
-- Inference utilities should return both the predicted class label and confidence score.
-- Export utilities will save models to `models/exported/`.
-- No implementation code exists in this directory yet.
-
-## Status
-
-Empty placeholder. Implementation planned for Week 4 (see `ROADMAP.md`).
+The exported folder is self-describing: `config.json` carries the architecture, class names, input
+size and normalisation, so nothing about preprocessing has to be guessed at inference time. It is
+also exactly what we upload to the Hugging Face Hub, and what `app/app.py` loads.

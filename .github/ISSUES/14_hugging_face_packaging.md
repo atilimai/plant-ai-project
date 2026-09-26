@@ -33,5 +33,11 @@ Hugging Face Hub is the standard distribution channel for ML models in the open 
 
 - Use `huggingface_hub` Python library for programmatic upload
 - Test model loading from Hugging Face before closing this issue
-- Ensure model card on Hugging Face matches `MODEL_CARD_DRAFT.md`
+- Ensure model card on Hugging Face matches `MODEL_CARD.md`
 - If dataset redistribution is not permitted, do not upload dataset files or processed splits to Hugging Face
+
+---
+
+## Status
+
+Prepared. `scripts/build_hf_release.py` assembles the model repo (weights, config, ONNX, metrics, model card with Hub metadata, inference example) and a Gradio Space under `release/`. Uploading is a separate manual step (`scripts/upload_to_hub.py`) and has not been run.

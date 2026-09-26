@@ -1,57 +1,57 @@
-# Contributing to Plant Disease Classification
+# Contributing
 
-Thank you for your interest in contributing to this project.
-This document describes how to contribute effectively and respectfully.
+Thanks for your interest. This is a small research repository; the bar is that anyone can reproduce
+what it claims.
 
----
+## Setup
 
-## How to Contribute
+```bash
+python -m venv .venv && .venv/Scripts/activate      # Linux/macOS: source .venv/bin/activate
+pip install -r requirements-dev.txt
+python -m src.data.prepare --config configs/data.yaml   # downloads 2.2 GB, writes data/splits/
+pytest
+```
 
-### Reporting Issues
-- Check existing issues before opening a new one to avoid duplicates
-- Use the appropriate issue template from `.github/ISSUE_TEMPLATE/`
-- Be specific: include steps to reproduce, expected behavior, and actual behavior for bugs
+The tests run on synthetic images in seconds and need neither the dataset nor a GPU.
 
-### Submitting Changes
-1. Fork the repository
-2. Create a feature branch from `main`: `git checkout -b feature/your-description`
-3. Make your changes with clear, focused commits
-4. Ensure your changes do not break existing tests
-5. Open a pull request with a descriptive title and summary
+## Before opening a pull request
 
-### Pull Request Guidelines
-- Keep pull requests focused on a single concern
-- Write clear commit messages
-- Reference related issues in the PR description (e.g., `Closes #12`)
-- Do not include unrelated changes
+```bash
+ruff check src tests scripts app
+pytest
+python scripts/audit_manifest.py     # only if you touched anything under data/splits or src/data
+```
 
----
+CI runs exactly these three.
 
-## Code Style
+## Research integrity rules
 
-- Python: follow [PEP 8](https://peps.python.org/pep-0008/)
-- Use type hints where practical
-- Write docstrings for public functions and classes
-- Keep functions small and single-purpose
+These are the ones we will actually push back on:
 
----
+1. **Splits stay at the leaf level.** Any change to `src/data/grouping.py` or `src/data/splits.py`
+   has to keep `python scripts/audit_manifest.py` passing, and changes to the split policy need the
+   reasoning in `data/splits/README.md` updated. If you add a grouping rule, add a test for it.
+2. **Test-set numbers come from the pipeline.** Report metrics produced by
+   `src.evaluation.evaluate` on the `test` split, not numbers typed into a notebook or a document.
+   Never tune hyperparameters on the test split; that is what `val` is for.
+3. **No made-up artifacts.** Every figure in `artifacts/` must come from a real model on real data.
+   (The repository used to contain confusion matrices generated from random noise; see
+   `docs/previous_state_audit.md`.)
+4. **No dataset files in git.** Manifests and metadata only. `.gitignore` enforces the common cases.
+5. **Claims match evidence.** If a result only holds on the lab-condition test set, say so where it
+   is stated.
 
-## Research Integrity Constraints
+## Style
 
-- **Do not submit split files that violate `leaf_id` integrity.** All train/val/test splits must respect `leaf_id` boundaries to prevent data leakage. See `DATASET_NOTES.md` for details.
-- **Do not report or commit model performance metrics unless they are computed on a properly leakage-free test set.**
-- **Do not commit dataset files directly to the repository.** Store paths, download scripts, or manifests only.
+* PEP 8, 100-column lines, `ruff` settings in `pyproject.toml`.
+* Type hints where they help a reader; docstrings on anything non-obvious, explaining *why* rather
+  than restating the code.
+* New behaviour that can break silently (grouping, splitting, metrics, checkpoint format) needs a
+  test.
+* Keep notebooks thin: logic goes in `src/`, notebooks call it. Long-running cells stay behind a
+  `RUN_*` flag.
 
----
+## Licence
 
-## License and Attribution
-
-Before contributing artifacts that include dataset-derived outputs (model weights, visualizations of dataset images, evaluation results):
-- Verify that the PlantVillage dataset license permits the intended use and redistribution
-- See `LICENSE_PLACEHOLDER.md` for the current license status
-
----
-
-## Questions
-
-Open a discussion issue or a `documentation` type issue using the issue templates.
+Code is GPL-2.0-only; PlantVillage data and anything trained on it is CC BY-SA 3.0. See
+`LICENSING.md` before adding dependencies or publishing artifacts.
