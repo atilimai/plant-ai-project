@@ -8,6 +8,9 @@ license = { text = "GPL-2.0-only" }
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"
+# The tests import `src`, so the repository root has to be importable. `python -m pytest`
+# adds the working directory by itself; a bare `pytest` (what CI runs) does not.
+pythonpath = ["."]
 filterwarnings = ["ignore::DeprecationWarning"]
 
 [tool.ruff]
